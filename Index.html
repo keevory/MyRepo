@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://www.printful.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    
+    <title>Printful: On-Demand Product Fulfillment &amp; Warehousing Services</title>
+    <meta name="og:type" content="website">
+<meta name="description" content="Design and sell custom products online with print-on-demand drop shipping. Sign up for free and start an online store without inventory.">
+<meta property="og:description" content="Design and sell custom products online with print-on-demand drop shipping. Sign up for free and start an online store without inventory.">
+<meta property="og:title" content="Printful: On-Demand Product Fulfillment &amp; Warehousing Services">
+<meta property="og:image" content="https://files.cdn.printful.com/upload/og-image-tag/c7/c742d815d319c3ecbaebfb4ff2922f43_l?v=1576220247">
+<meta property="og:site_name" content="Printful">
+<meta property="og:url" content="https://www.printful.com/">
+<link href="https://www.printful.com/" rel="canonical">
+<link href="https://www.googletagmanager.com/" rel="preconnect">
+<link href="https://www.google-analytics.com/" rel="preconnect">
+<link href="./Index_files/bootstrap.min.css" rel="stylesheet">
+<link href="./Index_files/style.css" rel="stylesheet">
+<link href="./Index_files/components.5d4d0e5312db5da9f89c.css" rel="stylesheet">
+<link href="./Index_files/layout.e76dd9e792fe82b304f6.css" rel="stylesheet">
+<link href="./Index_files/layout-sass.eaaeb6e576da9c057533.css" rel="stylesheet">
+<link href="./Index_files/pages.8ec89ecd2ddd43ec6e2d.css" rel="stylesheet">
+<link href="./Index_files/popup.main.a7b4271bd8ce44a1c677.css" rel="stylesheet">
+<link href="./Index_files/slick.min.css" rel="stylesheet">
+<link href="./Index_files/sitewide-search.ae60864ef290aae53f46.css" rel="stylesheet">
+<script type="text/javascript" id="www-widgetapi-script" src="./Index_files/www-widgetapi.js.download" async=""></script><script src="./Index_files/iframe_api"></script><script type="text/javascript" async="" src="./Index_files/js"></script><script async="" src="./Index_files/analytics.js.download"></script><script async="" src="./Index_files/gtm.js.download"></script><script>        (function () {
+            window.xss = function (isVue) {
+                var message = 'XSS in ' + (isVue ? 'Vue' : 'script');
+                
+                window.alert(message);
+                
+                debugger;
+            
+                if (!window.Sentry) {
+                    return;
+                }
+            
+                var data = {
+                    extra: {
+                        environmentId: ''
+                    }
+                };
+            
+                window.Sentry.captureException(new Error(message), data);  
+            }
+        })();
+
+            (function(global) {
+                global.MOMENT_LOCALE = "en";
+                global.MOMENT_TZ = "America/Los_Angeles";
+            })(this);</script>
+<script src="./Index_files/sentry.5.23.0.min.js.download"></script>
+<script>
+    (function () {
+        // Define global utils for working w/ Sentry
+        window.SentryUtils = {
+            ignoreErrorsWithStack: [
+                "MarvinPageExplorer",
+            ],
+            getInitParameters: function getInitParameters() {
+                // Gist w/ useful excludes: https://gist.github.com/impressiver/5092952
+                return {
+                    release: "printful-js@2d2581bdcbc4e678f3eecd644faafc626b49092c",
+                    dsn: "https:\/\/a924ee2dc34042c0b48e696c9d3402a5@sentry.printful.com\/6",
+                    environment: "production" || "unknown",
+                    // Ignoring exceptions from the following URLs
+                    denyUrls: [
+                        // Facebook flakiness
+                        /graph\.facebook\.com/i,
+                        // Facebook blocked
+                        /connect\.facebook\.net\/en_US\/all\.js/i,
+                        // Woopra flakiness
+                        /eatdifferent\.com\.woopra-ns\.com/i,
+                        /static\.woopra\.com\/js\/woopra\.js/i,
+                        // Chrome extensions
+                        /extensions\//i,
+                        /^chrome:\/\//i,
+                        // Other plugins
+                        /127\.0\.0\.1:4001\/isrunning/i, // Cacaoweb
+                        /webappstoolbarba\.texthelp\.com\//i,
+                        /metrics\.itunes\.apple\.com\.edgesuite\.net\//i,
+                        // Our custom blacklists
+                        /visualwebsiteoptimizer\.com/i, // VWO
+                        /connect\.facebook\.net\//i, // FBEvents
+                        // Shopify JS when we're embedded in their portal
+                        /cdn\.shopify\.com/i,
+                    ],
+                    // Ignore exceptions like this
+                    ignoreErrors: [
+                        // Random plugins/extensions
+                        "top.GLOBALS",
+                        // See: http://blog.errorception.com/2012/03/tale-of-unfindable-js-error.html
+                        "originalCreateNotification",
+                        "canvas.contentDocument",
+                        "MyApp_RemoveAllHighlights",
+                        "http://tt.epicplay.com",
+                        "Can't find variable: ZiteReader",
+                        "jigsaw is not defined",
+                        "ComboSearch is not defined",
+                        "http://loading.retry.widdit.com/",
+                        "atomicFindClose",
+                        // Facebook borked
+                        "fb_xd_fragment",
+                        // ISP "optimizing" proxy - `Cache-Control: no-transform` seems to
+                        // reduce this. (thanks @acdha)
+                        // See http://stackoverflow.com/questions/4113268
+                        "bmi_SafeAddOnload",
+                        "EBCallBackMessageReceived",
+                        // See http://toolbar.conduit.com/Developer/HtmlAndGadget/Methods/JSInjection.aspx
+                        "conduitPage",
+                        // Some GDrive extension related error?
+                        'getElementsByClassName("docs-homescreen-gb-container")[0].style',
+                        // We don't currently even have a ResizeObserver
+                        "ResizeObserver loop limit exceeded"
+                    ],
+                    beforeSend: function beforeSend(e, hint) {
+                        // Special adjustments from BaseAppError extending errors
+                        var err = hint.originalException;
+                        if (!err) {
+                            return e;
+                        }
+
+                        // Check if this needs to be filtered out
+                        var stack = err.stack;
+                        var stackFilter = window.SentryUtils.ignoreErrorsWithStack;
+                        if (stack && stackFilter) {
+                            var shouldFilterOut = stackFilter.some(function (filter) {
+                                if (filter instanceof RegExp) {
+                                    return !!filter.test(stack);
+                                } else {
+                                    return stack.indexOf(filter) !== -1;
+                                }
+                            });
+                            if (shouldFilterOut) {
+                                return null;
+                            }
+                        }
+
+                        // Add VError metadata
+                        if (err.__EXTENDS_VERROR) {
+                            // Set extra values
+                            e.extra = Object.assign(e.extra || {}, err.fullInfo());
+                        }
+
+                        return e;
+                    }
+                };
+            },
+
+            getUserData: function getUserData() {
+                return {"CustomerID":null,"EnvironmentID":null,"EmployeeID":null,"EmbedStoreID":null};
+            }
+        };
+
+        // Init Sentry
+        window.Sentry.init(window.SentryUtils.getInitParameters());
+
+        // Set User info
+        window.Sentry.setUser(window.SentryUtils.getUserData());
+    })();
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W24577');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Intago tracking -->
+<script>
+    (function () {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        const clickId = urlParams.get('clickId');
+
+        if (!clickId || typeof(window.localStorage) === 'undefined') {
+            return;
+        }
+
+        window.localStorage.setItem('intangoClickId', clickId);
+    }())
+</script>
+<!-- End Intago tracking --><script>
+    function getFilteredPathname() {
+        const search = window.location.search;
+
+        if (!search.length) {
+            return window.location.pathname;
+        }
+
+        const piiRegex = [
+            {
+                name: 'EMAIL',
+                regex: /[^\/]{4}(@|%40)(?!printful\.com)[^\/]{4}/gi,
+                group: ''
+            },
+            {
+                name: 'SELF-EMAIL',
+                regex: /[^\/]{4}(@|%40)(?=printful\.com)[^\/]{4}/gi,
+                group: ''
+            },
+            {
+                name: 'NAME',
+                regex: /((firstname=)|(lastname=)|(surname=)|(fullName=))[^&\/?]+/gi,
+                group: '$1'
+            },
+            {
+                name: 'TEL',
+                regex: /((tel=)|(telephone=)|(phone=)|(mobile=)|(mob=))[\d+\s][^&\/?]+/gi,
+                group: '$1'
+            },
+            {
+                name: 'PASSWORD',
+                regex: /((password=)|(passwd=)|(pass=))[^&\/?]+/gi,
+                group: '$1'
+            },
+            {
+                name: 'ZIP',
+                regex: /((postcode=)|(zipcode=)|(zip=))[^&\/?]+/gi,
+                group: '$1'
+            }
+        ];
+
+        const searchParams = search.replace(/(^\?)/, '').split("&");
+
+        for (const paramKey in searchParams) {
+            for (const regKey in piiRegex) {
+                const val = decodeURIComponent(searchParams[paramKey]);
+                const pii = piiRegex[regKey];
+
+                if (val.match(pii.regex)) {
+                    searchParams[paramKey] = encodeURIComponent(val.replace(pii.regex, pii.group + '[REDACTED_' + pii.name + ']'));
+                    break;
+                }
+            }
+        }
+
+        return window.location.pathname + '?' + searchParams.join('&');
+    }
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = true;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-40463935-1', {
+        'cookieDomain': 'printful.com',
+        'userId': 0});
+    ga('set', 'anonymizeIp', true);
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview', getFilteredPathname());
+
+</script>
+<script>
+(function() {
+    const STORAGE_KEY_ASSIGNED_AB_TESTS = 'assigned-ab-tests';
+
+    class AbTesting {
+        constructor(userVariants) {
+            this.abTests = userVariants.map((variant) => {
+                return { testId: variant.testId, variantKey: variant.variantKey };
+            });
+        }
+
+        getAbTestVariant(testId) {
+            const test = this.abTests.find((test) => test.testId === testId);
+
+            if (!test) {
+                return 0;
+            }
+
+            return test.variantKey;
+        }
+    }
+
+    window.abTesting = new AbTesting([]);
+
+    const assignedAbTestIds = getAssignedAbTestIds(STORAGE_KEY_ASSIGNED_AB_TESTS);
+
+    for (const test of window.abTesting.abTests) {
+        // Skip dataLayer event push if it was already pushed
+        if (assignedAbTestIds.includes(test.testId)) {
+            continue;
+        }
+
+        window.dataLayer = window.dataLayer || [];
+
+        window.dataLayer.push({
+            'event': 'abTesting',
+            'testId': test.testId,
+            'variantKey': test.variantKey,
+        });
+
+        assignedAbTestIds.push(test.testId);
+    }
+
+    saveAssignedAbTestIds(assignedAbTestIds, STORAGE_KEY_ASSIGNED_AB_TESTS);
+})();
+
+function getAssignedAbTestIds(localStorageKey) {
+    try {
+        const testIds = JSON.parse(window.localStorage.getItem(localStorageKey));
+
+        if (!testIds) {
+            return [];
+        }
+
+        return testIds;
+    } catch (err) {
+        console.log('Local storage not supported!');
+
+        return [];
+    }
+}
+
+function saveAssignedAbTestIds(testIds, localStorageKey) {
+    try {
+        window.localStorage.setItem(localStorageKey, JSON.stringify(testIds));
+    } catch (err) {
+        console.log('Local storage not supported!');
+    }
+}
+</script><meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="RNU4B4otMAZcR-gl5LSoJ0FafMteRxzMYEUYz1M6R2UJsQtXw1xbMyQzsVO3-poRMA4QoAYkRZkYF22OY3gCAQ==">
+
+    <link rel="shortcut icon" type="image/png" href="https://www.printful.com/favicon.png">
+
+    <link rel="manifest" href="https://www.printful.com/manifest.json">
+
+<script async="" src="./Index_files/api.js.download"></script></head>
+<body id="application" class="guest pf-lang--en">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W24577"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="cookie-policy" class="cookie-policy__block pf-w-100 pf-position-fixed">
+    </div>
+
+
+
+            <div id="app-header" class="header header--guest" role="navigation" aria-label="Site">
+            
+                            
+<div class="header__userbar pf-ui-body" id="userbar">
+    <div class="container pf-px-0">
+                <div class="pf-d-block pf-d-md-none pf-w-100 pf-h-100 pf-d-flex pf-position-absolute pf-align-items-center" style="top: 0">
+            <a href="https://www.printful.com/" class="logo logo--default" title="Printful">
+    </a>
+<div data-vue-root="vC5YmCOFCFS0bMrL" data-vue-components="[&quot;the-skip-to-main-content-link&quot;]" data-vuex-stores="[]"><the-skip-to-main-content-link></the-skip-to-main-content-link></div>        </div>
+
+        <div class="col-3 col-md-1 col-lg-2" style="z-index: 3;">
+            <div class="pf-d-none pf-d-md-block">
+                <a href="https://www.printful.com/" class="logo logo--default" title="Printful">
+    </a>
+<div data-vue-root="bf9739MAFyRkiBHU" data-vue-components="[&quot;the-skip-to-main-content-link&quot;]" data-vuex-stores="[]"><the-skip-to-main-content-link></the-skip-to-main-content-link></div>            </div>
+            <!-- Mobile icons -->
+            <div class="pf-d-md-none">
+                <div class="navigation-wrap">
+                    <div id="mobile-sliding-menu-cta" class="navbar-header" style="flex: 1;">
+                        <button type="button" class="navbar-toggle  pf-py-0 pf-px-8">
+            <span class="red-indicator"></span>
+        <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="close-icon"></span>
+    <span class="toggle-text"><span>Menu</span></span>
+</button>                    </div>
+                </div>
+                <div class="interface-toggle userbar__interface-toggle">
+                    <button type="button" class="navbar-toggle  pf-py-0 pf-px-8">
+        <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="close-icon"></span>
+    <span class="toggle-text"><span>Close</span></span>
+</button>                                    </div>
+            </div>
+        </div>
+        <div class="col-9 col-md-11 col-lg-10 pf-d-flex pf-align-items-center pf-position-relative pf-p-0">
+
+            <div class="col-6 col-md col-lg-5 col-xl-6" style="position: static">
+                                    <!-- Search Bar -->
+                    
+<div id="sitewide-search-232d266e" class="sitewide-search__user-bar">
+            <div id="sitewide-search" class="pf-w-100 pf-py-8 pf-py-sm-12 pf-py-md-0"></div>
+    </div>                            </div>
+            <div class="col-6 col-md col-lg-7 col-xl-6">
+                <!-- User buttons and login widget -->
+                <ul class="pf-d-flex pf-justify-content-end pf-align-items-center pf-m-0 pf-p-0">
+                                            
+    
+    <li class="pull-right pf-d-flex pf-align-items-center">
+                    
+<div data-vue-root="5LcaXMXNEwvOQr3T" data-vue-components="[&quot;settings-menu&quot;]" data-vuex-stores="[]"><settings-menu :onboarding-data="{&quot;selling_regions_settings_block&quot;:false,&quot;selling_regions_information_block&quot;:false,&quot;selling_region_settings_applied&quot;:false}" :selling-regions="[{&quot;id&quot;:1,&quot;name&quot;:&quot;Worldwide&quot;,&quot;translatedName&quot;:&quot;Worldwide&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/worldwide.svg&quot;,&quot;preferredRegions&quot;:null,&quot;requirements&quot;:[],&quot;countryCode&quot;:null,&quot;isSingleCountry&quot;:false,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:true,&quot;isBrazil&quot;:false},{&quot;id&quot;:2,&quot;name&quot;:&quot;North America&quot;,&quot;translatedName&quot;:&quot;North America&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/north-america.svg&quot;,&quot;preferredRegions&quot;:[&quot;AI&quot;,&quot;AG&quot;,&quot;AW&quot;,&quot;BS&quot;,&quot;BB&quot;,&quot;BZ&quot;,&quot;BM&quot;,&quot;KY&quot;,&quot;CR&quot;,&quot;CU&quot;,&quot;DM&quot;,&quot;DO&quot;,&quot;SV&quot;,&quot;GL&quot;,&quot;GD&quot;,&quot;GP&quot;,&quot;GT&quot;,&quot;HT&quot;,&quot;HN&quot;,&quot;JM&quot;,&quot;MQ&quot;,&quot;MX&quot;,&quot;MS&quot;,&quot;NI&quot;,&quot;PA&quot;,&quot;PR&quot;,&quot;KN&quot;,&quot;LC&quot;,&quot;VC&quot;,&quot;TC&quot;,&quot;VI&quot;,&quot;VG&quot;,&quot;STATE_AK&quot;],&quot;requirements&quot;:[{&quot;id&quot;:1,&quot;sellingRegionId&quot;:2,&quot;branchIds&quot;:[3,1,10,7,5,123],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:2,&quot;sellingRegionId&quot;:2,&quot;branchIds&quot;:[3,1,10,4,8,7,5,123,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:null,&quot;isSingleCountry&quot;:false,&quot;isNorthAmerica&quot;:true,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:3,&quot;name&quot;:&quot;USA&quot;,&quot;translatedName&quot;:&quot;USA&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/us.svg&quot;,&quot;preferredRegions&quot;:[&quot;US&quot;,&quot;UM&quot;],&quot;requirements&quot;:[{&quot;id&quot;:3,&quot;sellingRegionId&quot;:3,&quot;branchIds&quot;:[3,1,5,7,123],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:4,&quot;sellingRegionId&quot;:3,&quot;branchIds&quot;:[3,1,5,4,8,7,123,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;US&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:true,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:4,&quot;name&quot;:&quot;Canada&quot;,&quot;translatedName&quot;:&quot;Canada&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/ca.svg&quot;,&quot;preferredRegions&quot;:[&quot;CA&quot;],&quot;requirements&quot;:[{&quot;id&quot;:30,&quot;sellingRegionId&quot;:4,&quot;branchIds&quot;:[10],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:6,&quot;sellingRegionId&quot;:4,&quot;branchIds&quot;:[3,1,10,7,5],&quot;type&quot;:2,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:7,&quot;sellingRegionId&quot;:4,&quot;branchIds&quot;:[3,1,10,4,8,7,5,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;CA&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:true,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:5,&quot;name&quot;:&quot;Europe&quot;,&quot;translatedName&quot;:&quot;Europe&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/europe.svg&quot;,&quot;preferredRegions&quot;:[&quot;AL&quot;,&quot;AD&quot;,&quot;AT&quot;,&quot;AZ&quot;,&quot;BY&quot;,&quot;BE&quot;,&quot;BA&quot;,&quot;BG&quot;,&quot;HR&quot;,&quot;CZ&quot;,&quot;DK&quot;,&quot;EE&quot;,&quot;FO&quot;,&quot;FI&quot;,&quot;GE&quot;,&quot;GI&quot;,&quot;GR&quot;,&quot;GG&quot;,&quot;HU&quot;,&quot;IS&quot;,&quot;IE&quot;,&quot;IM&quot;,&quot;JE&quot;,&quot;KZ&quot;,&quot;LI&quot;,&quot;LT&quot;,&quot;LU&quot;,&quot;MT&quot;,&quot;MD&quot;,&quot;MC&quot;,&quot;MS&quot;,&quot;NL&quot;,&quot;NO&quot;,&quot;PL&quot;,&quot;PT&quot;,&quot;RO&quot;,&quot;RU&quot;,&quot;SM&quot;,&quot;RS&quot;,&quot;SK&quot;,&quot;SI&quot;,&quot;SJ&quot;,&quot;SE&quot;,&quot;CH&quot;,&quot;TR&quot;,&quot;UA&quot;,&quot;VA&quot;],&quot;requirements&quot;:[{&quot;id&quot;:8,&quot;sellingRegionId&quot;:5,&quot;branchIds&quot;:[4,8,11],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:9,&quot;sellingRegionId&quot;:5,&quot;branchIds&quot;:[3,1,4,8,7,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:null,&quot;isSingleCountry&quot;:false,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:true,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:6,&quot;name&quot;:&quot;Spain&quot;,&quot;translatedName&quot;:&quot;Spain&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/es.svg&quot;,&quot;preferredRegions&quot;:[&quot;ES&quot;],&quot;requirements&quot;:[{&quot;id&quot;:10,&quot;sellingRegionId&quot;:6,&quot;branchIds&quot;:[8,4],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:11,&quot;sellingRegionId&quot;:6,&quot;branchIds&quot;:[4,8,11],&quot;type&quot;:2,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:12,&quot;sellingRegionId&quot;:6,&quot;branchIds&quot;:[3,1,4,8,7,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;ES&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:7,&quot;name&quot;:&quot;Latvia&quot;,&quot;translatedName&quot;:&quot;Latvia&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/lv-source.svg&quot;,&quot;preferredRegions&quot;:[&quot;LV&quot;],&quot;requirements&quot;:[{&quot;id&quot;:13,&quot;sellingRegionId&quot;:7,&quot;branchIds&quot;:[4,11],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:14,&quot;sellingRegionId&quot;:7,&quot;branchIds&quot;:[3,1,4,8,7,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;LV&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:8,&quot;name&quot;:&quot;UK&quot;,&quot;translatedName&quot;:&quot;UK&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/uk.svg&quot;,&quot;preferredRegions&quot;:[&quot;GB&quot;],&quot;requirements&quot;:[{&quot;id&quot;:15,&quot;sellingRegionId&quot;:8,&quot;branchIds&quot;:[4,8,11],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:16,&quot;sellingRegionId&quot;:8,&quot;branchIds&quot;:[3,1,4,8,7,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;GB&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:9,&quot;name&quot;:&quot;Germany&quot;,&quot;translatedName&quot;:&quot;Germany&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/de.svg&quot;,&quot;preferredRegions&quot;:[&quot;DE&quot;],&quot;requirements&quot;:[{&quot;id&quot;:17,&quot;sellingRegionId&quot;:9,&quot;branchIds&quot;:[4,8,11],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:18,&quot;sellingRegionId&quot;:9,&quot;branchIds&quot;:[3,1,4,8,7,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;DE&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:10,&quot;name&quot;:&quot;France&quot;,&quot;translatedName&quot;:&quot;France&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/fr.svg&quot;,&quot;preferredRegions&quot;:[&quot;FR&quot;],&quot;requirements&quot;:[{&quot;id&quot;:19,&quot;sellingRegionId&quot;:10,&quot;branchIds&quot;:[8,4],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:20,&quot;sellingRegionId&quot;:10,&quot;branchIds&quot;:[3,1,4,8,7,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;FR&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:11,&quot;name&quot;:&quot;Australia&quot;,&quot;translatedName&quot;:&quot;Australia&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/au.svg&quot;,&quot;preferredRegions&quot;:[&quot;AU&quot;],&quot;requirements&quot;:[{&quot;id&quot;:21,&quot;sellingRegionId&quot;:11,&quot;branchIds&quot;:[102,120,127],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:22,&quot;sellingRegionId&quot;:11,&quot;branchIds&quot;:[102,120,3,1,7,127],&quot;type&quot;:2,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:23,&quot;sellingRegionId&quot;:11,&quot;branchIds&quot;:[102,120,3,1,4,8,7,11,127],&quot;type&quot;:3,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;AU&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:12,&quot;name&quot;:&quot;Japan&quot;,&quot;translatedName&quot;:&quot;Japan&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/jp-border.svg&quot;,&quot;preferredRegions&quot;:[&quot;JP&quot;],&quot;requirements&quot;:[{&quot;id&quot;:24,&quot;sellingRegionId&quot;:12,&quot;branchIds&quot;:[107],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:25,&quot;sellingRegionId&quot;:12,&quot;branchIds&quot;:[107,4,11],&quot;type&quot;:2,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null},{&quot;id&quot;:26,&quot;sellingRegionId&quot;:12,&quot;branchIds&quot;:[107,4,8,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;JP&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:13,&quot;name&quot;:&quot;New Zealand&quot;,&quot;translatedName&quot;:&quot;New Zealand&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/nz.svg&quot;,&quot;preferredRegions&quot;:[&quot;NZ&quot;],&quot;requirements&quot;:[{&quot;id&quot;:27,&quot;sellingRegionId&quot;:13,&quot;branchIds&quot;:[102,120,127],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:28,&quot;sellingRegionId&quot;:13,&quot;branchIds&quot;:[3,1,102,120,7,127],&quot;type&quot;:2,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:29,&quot;sellingRegionId&quot;:13,&quot;branchIds&quot;:[102,120,3,1,4,8,7,11,127],&quot;type&quot;:3,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;NZ&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:14,&quot;name&quot;:&quot;Italy&quot;,&quot;translatedName&quot;:&quot;Italy&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/it.svg&quot;,&quot;preferredRegions&quot;:[&quot;IT&quot;],&quot;requirements&quot;:[{&quot;id&quot;:31,&quot;sellingRegionId&quot;:14,&quot;branchIds&quot;:[8,4],&quot;type&quot;:1,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null},{&quot;id&quot;:33,&quot;sellingRegionId&quot;:14,&quot;branchIds&quot;:[4,8,11],&quot;type&quot;:2,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:32,&quot;sellingRegionId&quot;:14,&quot;branchIds&quot;:[1,3,4,7,8,11],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;IT&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:15,&quot;name&quot;:&quot;Brazil&quot;,&quot;translatedName&quot;:&quot;Brazil&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/br.svg&quot;,&quot;preferredRegions&quot;:[&quot;BR&quot;],&quot;requirements&quot;:[{&quot;id&quot;:34,&quot;sellingRegionId&quot;:15,&quot;branchIds&quot;:[125,126],&quot;type&quot;:1,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null},{&quot;id&quot;:35,&quot;sellingRegionId&quot;:15,&quot;branchIds&quot;:[1,3,4,5,7,8,11,125,126],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;BR&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:true},{&quot;id&quot;:16,&quot;name&quot;:&quot;Southeast Asia&quot;,&quot;translatedName&quot;:&quot;Southeast Asia&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/southeast-asia.svg&quot;,&quot;preferredRegions&quot;:[&quot;HK&quot;,&quot;ID&quot;,&quot;MY&quot;,&quot;PH&quot;,&quot;SG&quot;,&quot;TW&quot;,&quot;TH&quot;,&quot;VN&quot;],&quot;requirements&quot;:[{&quot;id&quot;:36,&quot;sellingRegionId&quot;:16,&quot;branchIds&quot;:[107],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:37,&quot;sellingRegionId&quot;:16,&quot;branchIds&quot;:[4,11,107],&quot;type&quot;:2,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null},{&quot;id&quot;:38,&quot;sellingRegionId&quot;:16,&quot;branchIds&quot;:[4,8,11,107],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:null,&quot;isSingleCountry&quot;:false,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false},{&quot;id&quot;:17,&quot;name&quot;:&quot;Republic of Korea&quot;,&quot;translatedName&quot;:&quot;Republic of Korea&quot;,&quot;icon&quot;:&quot;https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/kr-border.svg&quot;,&quot;preferredRegions&quot;:[&quot;KR&quot;],&quot;requirements&quot;:[{&quot;id&quot;:39,&quot;sellingRegionId&quot;:17,&quot;branchIds&quot;:[107],&quot;type&quot;:1,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null},{&quot;id&quot;:40,&quot;sellingRegionId&quot;:17,&quot;branchIds&quot;:[4,11,107],&quot;type&quot;:2,&quot;isDefault&quot;:true,&quot;deliveryTime&quot;:null},{&quot;id&quot;:41,&quot;sellingRegionId&quot;:17,&quot;branchIds&quot;:[4,8,11,107],&quot;type&quot;:3,&quot;isDefault&quot;:false,&quot;deliveryTime&quot;:null}],&quot;countryCode&quot;:&quot;KR&quot;,&quot;isSingleCountry&quot;:true,&quot;isNorthAmerica&quot;:false,&quot;isEurope&quot;:false,&quot;isCanada&quot;:false,&quot;isWorldwide&quot;:false,&quot;isBrazil&quot;:false}]" :options="{&quot;isWarehousingUser&quot;:false,&quot;hasStores&quot;:false,&quot;extraClass&quot;:&quot;pf-d-none pf-d-md-flex&quot;,&quot;isEmbed&quot;:false,&quot;iconSize&quot;:&quot;pf-i-24&quot;,&quot;isSideMenu&quot;:false,&quot;shortLanguage&quot;:&quot;EN&quot;,&quot;currencies&quot;:{&quot;USD&quot;:{&quot;code&quot;:&quot;USD&quot;,&quot;name&quot;:&quot;US Dollar&quot;,&quot;symbol&quot;:&quot;$&quot;,&quot;taxes&quot;:null},&quot;EUR&quot;:{&quot;code&quot;:&quot;EUR&quot;,&quot;name&quot;:&quot;Euro&quot;,&quot;symbol&quot;:&quot;\u20ac&quot;,&quot;taxes&quot;:{&quot;name&quot;:&quot;VAT&quot;,&quot;rate&quot;:1.21,&quot;includedInPrice&quot;:false}},&quot;GBP&quot;:{&quot;code&quot;:&quot;GBP&quot;,&quot;name&quot;:&quot;Pound Sterling&quot;,&quot;symbol&quot;:&quot;\u00a3&quot;,&quot;taxes&quot;:{&quot;name&quot;:&quot;VAT&quot;,&quot;rate&quot;:1.21,&quot;includedInPrice&quot;:false}},&quot;JPY&quot;:{&quot;code&quot;:&quot;JPY&quot;,&quot;name&quot;:&quot;Japanese yen&quot;,&quot;symbol&quot;:&quot;\u00a5&quot;,&quot;taxes&quot;:null},&quot;NOK&quot;:{&quot;code&quot;:&quot;NOK&quot;,&quot;name&quot;:&quot;Norwegian Krone&quot;,&quot;symbol&quot;:&quot;NOK&quot;,&quot;taxes&quot;:null},&quot;SGD&quot;:{&quot;code&quot;:&quot;SGD&quot;,&quot;name&quot;:&quot;Singapore Dollar&quot;,&quot;symbol&quot;:&quot;S$&quot;,&quot;taxes&quot;:null},&quot;SEK&quot;:{&quot;code&quot;:&quot;SEK&quot;,&quot;name&quot;:&quot;Swedish Krona&quot;,&quot;symbol&quot;:&quot;SEK&quot;,&quot;taxes&quot;:{&quot;name&quot;:&quot;VAT&quot;,&quot;rate&quot;:1.21,&quot;includedInPrice&quot;:false}},&quot;PLN&quot;:{&quot;code&quot;:&quot;PLN&quot;,&quot;name&quot;:&quot;Zloty&quot;,&quot;symbol&quot;:&quot;z\u0142&quot;,&quot;taxes&quot;:{&quot;name&quot;:&quot;VAT&quot;,&quot;rate&quot;:1.21,&quot;includedInPrice&quot;:false}},&quot;NZD&quot;:{&quot;code&quot;:&quot;NZD&quot;,&quot;name&quot;:&quot;New Zealand Dollar&quot;,&quot;symbol&quot;:&quot;NZ$&quot;,&quot;taxes&quot;:null},&quot;AUD&quot;:{&quot;code&quot;:&quot;AUD&quot;,&quot;name&quot;:&quot;Australian Dollar&quot;,&quot;symbol&quot;:&quot;AU$&quot;,&quot;taxes&quot;:null},&quot;MXN&quot;:{&quot;code&quot;:&quot;MXN&quot;,&quot;name&quot;:&quot;Mexican Peso&quot;,&quot;symbol&quot;:&quot;Mex$&quot;,&quot;taxes&quot;:null},&quot;BRL&quot;:{&quot;code&quot;:&quot;BRL&quot;,&quot;name&quot;:&quot;Brazilian Real&quot;,&quot;symbol&quot;:&quot;R$&quot;,&quot;taxes&quot;:null},&quot;HKD&quot;:{&quot;code&quot;:&quot;HKD&quot;,&quot;name&quot;:&quot;Hong Kong Dollar&quot;,&quot;symbol&quot;:&quot;HK$&quot;,&quot;taxes&quot;:null},&quot;DKK&quot;:{&quot;code&quot;:&quot;DKK&quot;,&quot;name&quot;:&quot;Danish Krone&quot;,&quot;symbol&quot;:&quot;DKK&quot;,&quot;taxes&quot;:{&quot;name&quot;:&quot;VAT&quot;,&quot;rate&quot;:1.21,&quot;includedInPrice&quot;:false}},&quot;CHF&quot;:{&quot;code&quot;:&quot;CHF&quot;,&quot;name&quot;:&quot;Swiss Franc&quot;,&quot;symbol&quot;:&quot;CHF&quot;,&quot;taxes&quot;:{&quot;name&quot;:&quot;VAT&quot;,&quot;rate&quot;:1.21,&quot;includedInPrice&quot;:false}},&quot;CAD&quot;:{&quot;code&quot;:&quot;CAD&quot;,&quot;name&quot;:&quot;Canadian Dollar&quot;,&quot;symbol&quot;:&quot;C$&quot;,&quot;taxes&quot;:null},&quot;KRW&quot;:{&quot;code&quot;:&quot;KRW&quot;,&quot;name&quot;:&quot;Won&quot;,&quot;symbol&quot;:&quot;KRW&quot;,&quot;taxes&quot;:null}},&quot;displayCurrency&quot;:&quot;USD&quot;,&quot;languages&quot;:{&quot;en_US&quot;:{&quot;code&quot;:&quot;en_US&quot;,&quot;name&quot;:&quot;English&quot;,&quot;shortName&quot;:&quot;EN&quot;},&quot;es_ES&quot;:{&quot;code&quot;:&quot;es_ES&quot;,&quot;name&quot;:&quot;Espa\u00f1ol&quot;,&quot;shortName&quot;:&quot;ES&quot;},&quot;fr_FR&quot;:{&quot;code&quot;:&quot;fr_FR&quot;,&quot;name&quot;:&quot;Fran\u00e7ais&quot;,&quot;shortName&quot;:&quot;FR&quot;},&quot;de_DE&quot;:{&quot;code&quot;:&quot;de_DE&quot;,&quot;name&quot;:&quot;Deutsch&quot;,&quot;shortName&quot;:&quot;DE&quot;},&quot;it_IT&quot;:{&quot;code&quot;:&quot;it_IT&quot;,&quot;name&quot;:&quot;Italiano&quot;,&quot;shortName&quot;:&quot;IT&quot;},&quot;ja_JP&quot;:{&quot;code&quot;:&quot;ja_JP&quot;,&quot;name&quot;:&quot;\u65e5\u672c\u8a9e&quot;,&quot;shortName&quot;:&quot;JP&quot;},&quot;pt_BR&quot;:{&quot;code&quot;:&quot;pt_BR&quot;,&quot;name&quot;:&quot;Portugu\u00eas&quot;,&quot;shortName&quot;:&quot;BR&quot;}},&quot;displayLanguage&quot;:&quot;en_US&quot;,&quot;suggestedLanguage&quot;:&quot;en_US&quot;,&quot;selectedTax&quot;:0,&quot;isLoggedIn&quot;:false,&quot;currencyIcon&quot;:&quot;currency-usd&quot;,&quot;currencyCode&quot;:&quot;USD&quot;,&quot;defaultWarehousingCurrency&quot;:null,&quot;defaultCurrencySymbol&quot;:null,&quot;allStoresCurrencyData&quot;:[],&quot;allStoresCurrencySymbol&quot;:null,&quot;isLandingPageNavbarUsed&quot;:false}"></settings-menu></div>                <a href="https://www.printful.com/auth/login" class="header__link pf-mx-8">
+            <i class="header__link__icon pf-i pf-i-account pf-i-24"></i>
+            <span class="pf-d-none pf-d-md-inline-block header__link__text">Sign in</span>
+        </a>
+        <a href="https://www.printful.com/auth/register" class="header__link pf-mx-8" onclick="beginRegistrationTracking(&#39;header&#39;, true)">
+            <i class="header__link__icon pf-i pf-i-account-plus pf-i-24"></i>
+            <span class="pf-d-none pf-d-md-inline-block header__link__text">Sign up</span>
+        </a>
+    </li>
+
+                                                    <li class="pf-d-inline-block">
+                                
+<div id="js--shopping-cart__88752666" class="pf-cart pf-d-flex pf-ml-md-8 pf-pr-sm-0">
+    <a class="header__link pf-d-flex pf-flex-column pf-flex-md-row pf-align-items-center">
+        <i class="header__link__icon pf-i pf-i-cart pf-i-24"></i>
+        <span class="pf-d-none pf-d-md-inline-block pf-text-muted pf-cart__icon-text header__link__text">My cart</span>
+    </a>
+</div>
+
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                        <div class="header__main  pf-mt-0">
+                    <div class="container ">
+                        <a href="https://www.printful.com/" class="logo logo--default" title="Printful">
+    </a>
+<div data-vue-root="MJZEF7RtW13q7YVr" data-vue-components="[&quot;the-skip-to-main-content-link&quot;]" data-vuex-stores="[]"><the-skip-to-main-content-link></the-skip-to-main-content-link></div>                        
+<div class="navbar pf-m-0 main-header__nav-outer" id="top">
+    <div class="main-header__nav-inner">
+        <div class="menu-wrap">
+            <ul id="nav" class="nav navbar-nav navbar-collapse pull-right"><li class="pf-d-block pf-d-md-none active"><a href="https://www.printful.com/">Home</a></li>
+<li class="has-submenu"><a href="https://www.printful.com/custom-products" id="navigation-menu-1-toggle">Products<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-1"></div></li>
+<li class="has-submenu"><a href="https://www.printful.com/services" id="navigation-menu-2-toggle">Services<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-2"></div></li>
+<li class="has-submenu"><a href="https://www.printful.com/integrations" id="navigation-menu-16-toggle">Integrations<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-16"></div></li>
+<li class="has-submenu"><a href="https://www.printful.com/how-printful-works" id="navigation-menu-42-toggle">How it works<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-42"></div></li>
+<li><a href="https://www.printful.com/design-maker" id="navigation-menu-1296-toggle">Design Maker<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-1296"></div></li>
+<li class="has-submenu"><a href="javascript:void(0);" id="navigation-menu-50-toggle">Resources<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-50"></div></li>
+<li><a href="https://www.printful.com/blog/" id="navigation-menu-1306-toggle">Blog<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="navigation-menu-1306"></div></li>
+<li class="pf-px-16 pf-mt-12 nav__sign-btn pf-d-block pf-d-md-none"><button class="pf-btn pf-btn-primary pf-btn-block"><a href="https://www.printful.com/auth/register" class="pf-text-white">Sign up</a></button></li>
+<li class="pf-mt-16 pf-mb-12 pf-px-16 pf-mr-16 nav__sign-btn pf-d-block pf-d-md-none"><button class="pf-btn pf-btn-secondary pf-btn-block"><a class="pf-text-dark" href="https://www.printful.com/auth/login">Sign in</a></button></li>
+<li class="has-submenu js-user-language pf-d-md-none"><a href="https://www.printful.com/#" id="languages-menu-toggle"><span class="pf-i pf-i-translate pf-i-24 pf-text-gray pf-mr-8"></span>EN<span class="submenu-caret"></span></a><div class="main-menu-submenu" id="languages-menu"></div></li>
+<li class="pf-d-md-none js-user-settings-toggle" onclick="return false;"><a href="https://www.printful.com/#"><span class="pf-i pf-i-currency-usd pf-text-gray pf-i-24 pf-mr-8"></span>USD</a></li>
+<li class="has-submenu js-env-selling-region pf-d-md-none"><a href="https://www.printful.com/#" id="selling-region-menu-toggle"><span class="pf-i pf-i-map-marker pf-text-gray pf-i-24 pf-mr-8 pf-position-relative"><span class="red-indicator"></span></span><span class="menu-label">Worldwide</span><span class="submenu-caret"></span></a><div class="main-menu-submenu" id="selling-region-menu"></div></li></ul>            <div id="bullet-progress-bar" class="pull-right margin-top-10 bullet-progress-bar"></div>
+                    </div>
+    </div>
+</div>
+
+                                                    
+<div id="sitewide-search-9768fa89" class="sitewide-search__menu-bar pf-px-8">
+    </div>                                            </div>
+                </div>
+                                    </div>
+    
+
+
+<script>(function () {
+    var PF = window.PF || {};
+    PF.CAPTCHA_SITE_KEY = "6LfobH0UAAAAAKVJ0gTaQS9RLFC0L7_QrwPb_QUZ";
+    PF.CAPTCHA_PRIVACY_URL = "https:\/\/policies.google.com\/privacy?hl=en_US";
+    PF.CAPTCHA_TERMS_URL = "https:\/\/policies.google.com\/terms?hl=en_US";
+    window.PF = PF;
+})();
+
+            (function() {
+                var PF = window.PF || {};
+                
+                // Configs
+                PF.Config = PF.Config || {};
+                PF.Config.CURRENCY_CONFIG = {
+                    SYMBOL_POSITION_BEFORE: 0,
+                    SYMBOL_POSITION_AFTER: 1,
+                };
+                
+                // Raw globals
+                PF.RawGlobals = PF.RawGlobals || {};
+                PF.RawGlobals.DisplayCurrency = {"currency":"USD","symbol":"$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"US Dollar","exponent":2};
+                
+                // Other
+                PF.Currencies = {"AED":{"currency":"AED","symbol":"\u062f.\u0625","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"UAE Dirham","exponent":2},"AFN":{"currency":"AFN","symbol":"\u060b","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Afghani","exponent":2},"ALL":{"currency":"ALL","symbol":"Lek","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Albanian Lek","exponent":2},"AMD":{"currency":"AMD","symbol":"\u058f","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Armenian Dram","exponent":2},"ANG":{"currency":"ANG","symbol":"NA\u0192","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Netherlands Antillean Guilder","exponent":2},"AOA":{"currency":"AOA","symbol":"Kz","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Kwanza","exponent":2},"ARS":{"currency":"ARS","symbol":"ARS","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Argentine Peso","exponent":2},"AUD":{"currency":"AUD","symbol":"AU$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Australian Dollar","exponent":2},"AWG":{"currency":"AWG","symbol":"\u0192","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Aruban Florin","exponent":2},"AZN":{"currency":"AZN","symbol":"\u20bc","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Azerbaijan Manat","exponent":2},"BAM":{"currency":"BAM","symbol":"KM","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Convertible Mark","exponent":2},"BBD":{"currency":"BBD","symbol":"Bds$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Barbados Dollar","exponent":2},"BDT":{"currency":"BDT","symbol":"\u09f3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Taka","exponent":2},"BGN":{"currency":"BGN","symbol":"\u043b\u0432","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Bulgarian Lev","exponent":2},"BHD":{"currency":"BHD","symbol":".\u062f.\u0628","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Bahraini Dinar","exponent":2},"BIF":{"currency":"BIF","symbol":"FBu","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Burundi Franc","exponent":2},"BMD":{"currency":"BMD","symbol":"BMD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Bermudian Dollar","exponent":2},"BND":{"currency":"BND","symbol":"BND","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Brunei Dollar","exponent":2},"BOB":{"currency":"BOB","symbol":"$b","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Boliviano","exponent":2},"BRL":{"currency":"BRL","symbol":"R$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Brazilian Real","exponent":2},"BSD":{"currency":"BSD","symbol":"BSD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Bahamian Dollar","exponent":2},"BTC":{"currency":"BTC","symbol":"\u0243","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Bitcoin","exponent":2},"BTN":{"currency":"BTN","symbol":"Nu.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Ngultrum","exponent":2},"BWP":{"currency":"BWP","symbol":"P","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Pula","exponent":2},"BZD":{"currency":"BZD","symbol":"BZ$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Belize Dollar","exponent":2},"CAD":{"currency":"CAD","symbol":"C$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Canadian Dollar","exponent":2},"CDF":{"currency":"CDF","symbol":"FC","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Congolese Franc","exponent":2},"CHF":{"currency":"CHF","symbol":"CHF","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Swiss Franc","exponent":2},"CLF":{"currency":"CLF","symbol":"CLF","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Unidad de Fomento","exponent":2},"CLP":{"currency":"CLP","symbol":"CLP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Chilean Peso","exponent":2},"CNY":{"currency":"CNY","symbol":"\u00a5","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Yuan Renminbi","exponent":2},"COP":{"currency":"COP","symbol":"COP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Colombian Peso","exponent":2},"CRC":{"currency":"CRC","symbol":"\u20a1","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Costa Rican Colon","exponent":2},"CUP":{"currency":"CUP","symbol":"CUP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Cuban Peso","exponent":2},"CVE":{"currency":"CVE","symbol":"$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Cabo Verde Escudo","exponent":2},"CZK":{"currency":"CZK","symbol":"K\u010d","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Czech Koruna","exponent":2},"DJF":{"currency":"DJF","symbol":"Fdj","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Djibouti Franc","exponent":2},"DKK":{"currency":"DKK","symbol":"DKK","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Danish Krone","exponent":2},"DOP":{"currency":"DOP","symbol":"RD$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Dominican Peso","exponent":2},"DZD":{"currency":"DZD","symbol":"\u062f\u062c","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Algerian Dinar","exponent":2},"EGP":{"currency":"EGP","symbol":"E\u00a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Egyptian Pound","exponent":2},"ERN":{"currency":"ERN","symbol":"ERN","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Nakfa","exponent":2},"ETB":{"currency":"ETB","symbol":"ETB","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Ethiopian Birr","exponent":2},"EUR":{"currency":"EUR","symbol":"\u20ac","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Euro","exponent":2},"FJD":{"currency":"FJD","symbol":"FJ$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Fiji Dollar","exponent":2},"FKP":{"currency":"FKP","symbol":"FK\u00a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Falkland Islands Pound","exponent":2},"GBP":{"currency":"GBP","symbol":"\u00a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Pound Sterling","exponent":2},"GEL":{"currency":"GEL","symbol":"\u10da","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Lari","exponent":2},"GGP":{"currency":"GGP","symbol":"\u00a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Guernsey Pound","exponent":2},"GHS":{"currency":"GHS","symbol":"GH\u00a2","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Ghana Cedi","exponent":2},"GIP":{"currency":"GIP","symbol":"GIP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Gibraltar Pound","exponent":2},"GMD":{"currency":"GMD","symbol":"D","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Dalasi","exponent":2},"GNF":{"currency":"GNF","symbol":"GFr","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Guinean Franc","exponent":2},"GTQ":{"currency":"GTQ","symbol":"Q","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Quetzal","exponent":2},"GYD":{"currency":"GYD","symbol":"GY$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Guyana Dollar","exponent":2},"HKD":{"currency":"HKD","symbol":"HK$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Hong Kong Dollar","exponent":2},"HNL":{"currency":"HNL","symbol":"L","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Lempira","exponent":2},"HRK":{"currency":"HRK","symbol":"kn","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Kuna","exponent":2},"HTG":{"currency":"HTG","symbol":"G","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Gourde","exponent":2},"HUF":{"currency":"HUF","symbol":"Ft","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Forint","exponent":2},"IDR":{"currency":"IDR","symbol":"Rp","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Indonesia Rupiah","exponent":2},"ILS":{"currency":"ILS","symbol":"\u20aa","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"New Israeli Sheqel","exponent":2},"IMP":{"currency":"IMP","symbol":"\u00a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Manx Pound","exponent":2},"INR":{"currency":"INR","symbol":"\u20b9","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Indian Rupee","exponent":2},"IQD":{"currency":"IQD","symbol":"\u0639.\u062f","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Iraqi Dinar","exponent":2},"IRR":{"currency":"IRR","symbol":"\ufdfc","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Iranian Rial","exponent":2},"ISK":{"currency":"ISK","symbol":"\u00cdkr","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Iceland Krona","exponent":2},"JEP":{"currency":"JEP","symbol":"\u00a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Jersey Pound","exponent":2},"JMD":{"currency":"JMD","symbol":"J$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Jamaican Dollar","exponent":2},"JOD":{"currency":"JOD","symbol":"\u062f.\u0627","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Jordanian Dinar","exponent":2},"JPY":{"currency":"JPY","symbol":"\u00a5","symbolPosition":0,"decimalPoint":".","thousandsSeparator":"","currencyName":"Japanese yen","exponent":0},"KES":{"currency":"KES","symbol":"KSh","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Kenyan Shilling","exponent":2},"KGS":{"currency":"KGS","symbol":"\u041b\u0432","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Som","exponent":2},"KHR":{"currency":"KHR","symbol":"\u17db","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Riel","exponent":2},"KMF":{"currency":"KMF","symbol":"CF","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Comorian Franc ","exponent":2},"KPW":{"currency":"KPW","symbol":"KPW","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"North Korean Won","exponent":2},"KRW":{"currency":"KRW","symbol":"KRW","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Won","exponent":0},"KWD":{"currency":"KWD","symbol":"\u200e\u062f.\u0643","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Kuwaiti Dinar","exponent":2},"KYD":{"currency":"KYD","symbol":"CI$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Cayman Islands Dollar","exponent":2},"KZT":{"currency":"KZT","symbol":"\u20b8","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Tenge","exponent":2},"LAK":{"currency":"LAK","symbol":"\u20adN","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Lao Kip","exponent":2},"LBP":{"currency":"LBP","symbol":"\u0644.\u0644.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Lebanese Pound","exponent":2},"LKR":{"currency":"LKR","symbol":"LKR","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Sri Lanka Rupee","exponent":2},"LRD":{"currency":"LRD","symbol":"L$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Liberian Dollar","exponent":2},"LSL":{"currency":"LSL","symbol":"LSL","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Loti","exponent":2},"LYD":{"currency":"LYD","symbol":"LD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Libyan Dinar","exponent":2},"MAD":{"currency":"MAD","symbol":"DH","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Moroccan Dirham","exponent":2},"MDL":{"currency":"MDL","symbol":"L","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Moldovan Leu","exponent":2},"MGA":{"currency":"MGA","symbol":"MGA","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Malagasy Ariary","exponent":2},"MKD":{"currency":"MKD","symbol":"\u0414\u0435\u043d","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Denar","exponent":2},"MMK":{"currency":"MMK","symbol":"K","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Kyat","exponent":2},"MNT":{"currency":"MNT","symbol":"\u20ae","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Tugrik","exponent":2},"MOP":{"currency":"MOP","symbol":"MOP$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Pataca","exponent":2},"MUR":{"currency":"MUR","symbol":"\u20a8","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Mauritius Rupee","exponent":2},"MVR":{"currency":"MVR","symbol":"MRf","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Rufiyaa","exponent":2},"MWK":{"currency":"MWK","symbol":"MK","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Malawi Kwacha","exponent":2},"MXN":{"currency":"MXN","symbol":"Mex$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Mexican Peso","exponent":2},"MYR":{"currency":"MYR","symbol":"RM","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Malaysian Ringgit","exponent":2},"MZN":{"currency":"MZN","symbol":"MT","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Mozambique Metical","exponent":2},"NAD":{"currency":"NAD","symbol":"N$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Namibia Dollar","exponent":2},"NGN":{"currency":"NGN","symbol":"\u20a6","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Naira","exponent":2},"NIO":{"currency":"NIO","symbol":"NIO","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Cordoba Oro","exponent":2},"NOK":{"currency":"NOK","symbol":"NOK","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Norwegian Krone","exponent":2},"NPR":{"currency":"NPR","symbol":"Rs.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Nepalese Rupee","exponent":2},"NZD":{"currency":"NZD","symbol":"NZ$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"New Zealand Dollar","exponent":2},"OMR":{"currency":"OMR","symbol":"\u0631.\u0639.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Rial Omani","exponent":2},"PAB":{"currency":"PAB","symbol":"B\/.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Balboa","exponent":2},"PEN":{"currency":"PEN","symbol":"S\/","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Sol","exponent":2},"PGK":{"currency":"PGK","symbol":"K","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Kina","exponent":2},"PHP":{"currency":"PHP","symbol":"PHP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Philippine Peso","exponent":2},"PKR":{"currency":"PKR","symbol":"Rs","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Pakistan Rupee","exponent":2},"PLN":{"currency":"PLN","symbol":"z\u0142","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Zloty","exponent":2},"PYG":{"currency":"PYG","symbol":"\u20b2","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Guarani","exponent":2},"QAR":{"currency":"QAR","symbol":"QAR","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Qatari Rial","exponent":2},"RON":{"currency":"RON","symbol":"lei","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Romanian Leu","exponent":2},"RSD":{"currency":"RSD","symbol":"\u0420\u0421\u0414","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Serbian Dinar","exponent":2},"RUB":{"currency":"RUB","symbol":"\u0440\u0443\u0431","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Russian Ruble","exponent":2},"RWF":{"currency":"RWF","symbol":"FRw","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Rwanda Franc","exponent":2},"SAR":{"currency":"SAR","symbol":"SAR","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Saudi Riyal","exponent":2},"SBD":{"currency":"SBD","symbol":"Si$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Solomon Islands Dollar","exponent":2},"SCR":{"currency":"SCR","symbol":"SCR","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Seychelles Rupee","exponent":2},"SDG":{"currency":"SDG","symbol":"\u062c.\u0633.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Sudanese Pound","exponent":2},"SEK":{"currency":"SEK","symbol":"SEK","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Swedish Krona","exponent":2},"SGD":{"currency":"SGD","symbol":"S$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Singapore Dollar","exponent":2},"SHP":{"currency":"SHP","symbol":"SHP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Saint Helena Pound","exponent":2},"SLL":{"currency":"SLL","symbol":"Le","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Leone","exponent":2},"SOS":{"currency":"SOS","symbol":"Sh.so.","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Somali Shilling","exponent":2},"SRD":{"currency":"SRD","symbol":"SRD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Surinam Dollar","exponent":2},"SVC":{"currency":"SVC","symbol":"SVC","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"El Salvador Colon","exponent":2},"SYP":{"currency":"SYP","symbol":"SYP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Syrian Pound","exponent":2},"SZL":{"currency":"SZL","symbol":"SZL","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Lilangeni","exponent":2},"THB":{"currency":"THB","symbol":"\u0e3f","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Baht","exponent":2},"TJS":{"currency":"TJS","symbol":"\u0405M","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Somoni","exponent":2},"TMT":{"currency":"TMT","symbol":"T","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Turkmenistan New Manat","exponent":2},"TND":{"currency":"TND","symbol":"TND","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Tunisian Dinar","exponent":2},"TOP":{"currency":"TOP","symbol":"TOP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Pa\u2019anga","exponent":2},"TRY":{"currency":"TRY","symbol":"\u20ba","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Turkish Lira","exponent":2},"TTD":{"currency":"TTD","symbol":"TTD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Trinidad and Tobago Dollar","exponent":2},"TWD":{"currency":"TWD","symbol":"NT$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"New Taiwan Dollar","exponent":2},"TZS":{"currency":"TZS","symbol":"TSh","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Tanzanian Shilling","exponent":2},"UAH":{"currency":"UAH","symbol":"\u20b4","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Hryvnia","exponent":2},"UGX":{"currency":"UGX","symbol":"USh","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Uganda Shilling","exponent":2},"USD":{"currency":"USD","symbol":"$","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"US Dollar","exponent":2},"UYU":{"currency":"UYU","symbol":"$U","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Peso Uruguayo","exponent":2},"UZS":{"currency":"UZS","symbol":"som","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Uzbekistan Sum","exponent":2},"VND":{"currency":"VND","symbol":"\u20ab","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Dong","exponent":2},"VUV":{"currency":"VUV","symbol":"VT","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Vatu","exponent":2},"WST":{"currency":"WST","symbol":"WST","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Tala","exponent":2},"XAF":{"currency":"XAF","symbol":"FCFA","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"CFA Franc BEAC","exponent":2},"XAG":{"currency":"XAG","symbol":"XAG","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Silver, oz t","exponent":2},"XAU":{"currency":"XAU","symbol":"XAU","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Gold, oz t","exponent":2},"XCD":{"currency":"XCD","symbol":"XCD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"East Caribbean Dollar","exponent":2},"XDR":{"currency":"XDR","symbol":"XDR","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"SDR (Special Drawing Right)","exponent":2},"XOF":{"currency":"XOF","symbol":"CFA","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"CFA Franc BCEAO","exponent":2},"XPF":{"currency":"XPF","symbol":"\u20a3","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"CFP Franc","exponent":2},"YER":{"currency":"YER","symbol":"\ufdfc","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Yemeni Rial","exponent":2},"ZAR":{"currency":"ZAR","symbol":"R","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Rand","exponent":2},"ZMW":{"currency":"ZMW","symbol":"ZK","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Zambian Kwacha","exponent":2},"ZWL":{"currency":"ZWL","symbol":"ZWL","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Zimbabwe Dollar","exponent":2},"CUC":{"currency":"CUC","symbol":"CUC","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Peso Convertible","exponent":2},"XPD":{"currency":"XPD","symbol":"XPD","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Palladium, oz t","exponent":2},"XPT":{"currency":"XPT","symbol":"XPT","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Platinum, oz t","exponent":2},"BYN":{"currency":"BYN","symbol":"BYN","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Belarusian Ruble","exponent":2},"CNH":{"currency":"CNH","symbol":"\u00a5","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Yuan Renminbi","exponent":2},"SSP":{"currency":"SSP","symbol":"SSP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"South Sudanese Pound","exponent":2},"MRU":{"currency":"MRU","symbol":"MRU","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Ouguiya","exponent":2},"STN":{"currency":"STN","symbol":"Db","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Dobra","exponent":2},"VES":{"currency":"VES","symbol":"VES","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Bol\u00edvar Soberano","exponent":2},"CNT":{"currency":"CNT","symbol":"\u00a5","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Yuan Renminbi","exponent":2},"RMB":{"currency":"RMB","symbol":"\u00a5","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Yuan Renminbi","exponent":2},"MRO":{"currency":"MRO","symbol":"","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"","exponent":2},"STD":{"currency":"STD","symbol":"","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"","exponent":2},"VEF":{"currency":"VEF","symbol":"","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"","exponent":2},"LVL":{"currency":"LVL","symbol":"Ls","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"","exponent":2},"PLP":{"currency":"PLP","symbol":"PLP","symbolPosition":0,"decimalPoint":".","thousandsSeparator":",","currencyName":"Printful Loyalty Points","exponent":0}};
+                PF.CurrenciesTax = {"EUR":{"currencyCode":"EUR","taxName":"VAT","taxRate":1.21,"isTaxIncluded":false,"isTaxAvailable":true},"GBP":{"currencyCode":"GBP","taxName":"VAT","taxRate":1.21,"isTaxIncluded":false,"isTaxAvailable":true},"SEK":{"currencyCode":"SEK","taxName":"VAT","taxRate":1.21,"isTaxIncluded":false,"isTaxAvailable":true},"DKK":{"currencyCode":"DKK","taxName":"VAT","taxRate":1.21,"isTaxIncluded":false,"isTaxAvailable":true},"CHF":{"currencyCode":"CHF","taxName":"VAT","taxRate":1.21,"isTaxIncluded":false,"isTaxAvailable":true},"PLN":{"currencyCode":"PLN","taxName":"VAT","taxRate":1.21,"isTaxIncluded":false,"isTaxAvailable":true}};
+                
+                if (!window.PF) {
+                    window.PF = PF;
+                }
+            })();
+        
+
+            window.PfUrls = {"\/dashboard\/order\/add-product":"\/dashboard\/order\/add-product","\/custom-products":"\/custom-products","\/custom\/mens\/t-shirts?styles=Fast+fashion&brand=Bella+%2B+Canvas":"\/custom\/mens\/t-shirts?styles=Fast+fashion&brand=Bella+%2B+Canvas","\/custom\/mens\/sweatpants-joggers":"\/custom\/mens\/sweatpants-joggers","\/custom\/mens\/jackets":"\/custom\/mens\/jackets","\/custom\/womens\/bodysuits":"\/custom\/womens\/bodysuits","\/custom\/hat-embroidery\/guidelines":"\/custom\/hat-embroidery\/guidelines","\/custom\/engraved\/jewelry":"\/custom\/engraved\/jewelry","\/custom\/kids-teen\/hoodies":"\/custom\/kids-teen\/hoodies","\/custom\/womens\/all-over-shirts\/all-over-print-womens-rash-guard":"\/custom\/womens\/all-over-shirts\/all-over-print-womens-rash-guard","\/custom\/embroidered\/hats\/yupoong-6245cm-unstructured-classic-dad-cap#guidelines":"\/custom\/embroidered\/hats\/yupoong-6245cm-unstructured-classic-dad-cap#guidelines","\/custom\/hats-embroidery\/231\/embroidery-sample?tab=Info":"\/custom\/hats-embroidery\/231\/embroidery-sample?tab=Info","\/custom\/bags\/backpacks\/champion-backpack":"\/custom\/bags\/backpacks\/champion-backpack","\/custom\/bags\/fanny-packs":"\/custom\/bags\/fanny-packs","\/custom\/bags\/totes":"\/custom\/bags\/totes","\/custom\/embroidered\/dad-hats":"\/custom\/embroidered\/dad-hats","\/auth":"\/auth","\/auth\/register":"\/auth\/register","\/auth\/forgot":"\/auth\/forgot","\/auth\/login":"\/auth\/login","\/generator":"\/generator","\/feature-request":"\/feature-request","\/terms\/privacy":"\/terms\/privacy","\/terms\/cookie-policy":"\/terms\/cookie-policy","\/policies\/affiliate":"\/policies\/affiliate","\/policies\/brand-ambassador":"\/policies\/brand-ambassador","\/policies\/updates":"\/policies\/updates","\/policies\/content-guidelines":"\/policies\/content-guidelines","\/policies\/terms-of-service":"\/policies\/terms-of-service","\/policies\/privacy":"\/policies\/privacy","\/policies\/data-processing-terms":"\/policies\/data-processing-terms","\/policies\/sub-processors":"\/policies\/sub-processors","\/policies\/cookies":"\/policies\/cookies","\/policies\/referral":"\/policies\/referral","\/transparency-in-dtg-files":"\/transparency-in-dtg-files","\/integrations":"\/integrations","\/faq\/integrations\/etsy\/288-can-t-publish-products-on-etsy":"\/faq\/integrations\/etsy\/288-can-t-publish-products-on-etsy","\/faq\/integrations\/ecwid\/183-how-to-manage-shipping-for-ecwid-":"\/faq\/integrations\/ecwid\/183-how-to-manage-shipping-for-ecwid-","\/faq\/taxes-and-fees\/vat\/258-what-do-i-need-to-do-to-charge-the-correct-vat-rate-":"\/faq\/taxes-and-fees\/vat\/258-what-do-i-need-to-do-to-charge-the-correct-vat-rate-","\/faq\/taxes-and-billing\/taxes-and-fees-sub\/345-why-am-i-being-charged-tax-for-orders-going-to-australia-":"\/faq\/taxes-and-billing\/taxes-and-fees-sub\/345-why-am-i-being-charged-tax-for-orders-going-to-australia-","\/faq\/shipping-packaging-fulfillment\/466-why-can-t-i-select-express-shipping-at-order-checkout-":"\/faq\/shipping-packaging-fulfillment\/466-why-can-t-i-select-express-shipping-at-order-checkout-","\/faq\/amazon\/300-can-i-use-amazon-to-sell-in-different-regions-":"\/faq\/amazon\/300-can-i-use-amazon-to-sell-in-different-regions-","\/faq\/warehousing-fulfillment\/257-can-i-buy-printful-products-in-bulk-and-stock-them-":"\/faq\/warehousing-fulfillment\/257-can-i-buy-printful-products-in-bulk-and-stock-them-","\/faq\/warehousing-fulfillment\/249-why-do-my-products-have-to-be-approved-first-":"\/faq\/warehousing-fulfillment\/249-why-do-my-products-have-to-be-approved-first-","\/faq\/pricing-fees\/52":"\/faq\/pricing-fees\/52","\/faq\/billing\/406":"\/faq\/billing\/406","\/faq\/getting-started\/311-do-sample-orders-come-with-free-shipping":"\/faq\/getting-started\/311-do-sample-orders-come-with-free-shipping","\/faq\/getting-started\/310-how-can-i-get-more-sample-orders":"\/faq\/getting-started\/310-how-can-i-get-more-sample-orders","\/faq\/getting-started\/106-is-there-a-limit-on-sample-orders-":"\/faq\/getting-started\/106-is-there-a-limit-on-sample-orders-","\/faq\/design-tips-mockups\/87":"\/faq\/design-tips-mockups\/87","\/faq\/products\/169":"\/faq\/products\/169","\/faq\/shipping-packaging-fulfillment\/194-why-is-my-product-out-of-stock-":"\/faq\/shipping-packaging-fulfillment\/194-why-is-my-product-out-of-stock-","\/faq\/products\/343-what-are-digitization-and-adjustment-fees-":"\/faq\/products\/343-what-are-digitization-and-adjustment-fees-","\/faq\/shopify\/47":"\/faq\/shopify\/47","\/faq\/shipping-packaging-fulfillment\/21-what-does-the-packing-slip-look-like-":"\/faq\/shipping-packaging-fulfillment\/21-what-does-the-packing-slip-look-like-","\/faq\/video-tips\/143":"\/faq\/video-tips\/143","\/faq\/amazon\/302-how-do-i-request-gtin-exemption-from-amazon-":"\/faq\/amazon\/302-how-do-i-request-gtin-exemption-from-amazon-","\/faq\/amazon\/301-what-s-an-amazon-brand-support-letter-":"\/faq\/amazon\/301-what-s-an-amazon-brand-support-letter-","\/faq\/warehousing-fulfillment\/281-how-much-will-shipping-cost-for-warehouse-items-":"\/faq\/warehousing-fulfillment\/281-how-much-will-shipping-cost-for-warehouse-items-","\/faq\/taxes-and-billing\/billing":"\/faq\/taxes-and-billing\/billing","\/faq\/taxes-and-billing\/sales-tax\/371-which-states-does-printful-charge-sales-tax-in-":"\/faq\/taxes-and-billing\/sales-tax\/371-which-states-does-printful-charge-sales-tax-in-","\/faq\/products\/478-how-can-i-get-featured-on-printful-s-website-":"\/faq\/products\/478-how-can-i-get-featured-on-printful-s-website-","\/faq\/terms-policies-returns\/452-how-do-i-inform-printful-about-intellectual-property-infringement-":"\/faq\/terms-policies-returns\/452-how-do-i-inform-printful-about-intellectual-property-infringement-","\/shipping":"\/shipping","\/app":"\/app","\/about":"\/about","\/design-services":"\/design-services","\/terms":"\/site\/terms","\/content-guidelines":"\/policies\/content-guidelines","\/volume-discounts":"\/site\/volume-discounts","\/volume-discounts#search-products-for-discount-rates":"\/site\/volume-discounts#search-products-for-discount-rates","\/start-your-online-store-without-inventory":"\/start-your-online-store-without-inventory","\/printing-services":"\/site\/printing-services","\/make-your-own-shirt":"\/make-your-own-shirt","\/print-on-demand-leggings-no-minimum":"\/print-on-demand-leggings-no-minimum","\/sitemap":"\/sitemap","\/affiliates":"\/site\/affiliates","\/monthly-discounts":"\/monthly-discounts","\/contacts":"\/contacts","\/printful-pro":"\/printful-pro","\/checklist":"\/checklist","\/dashboard\/affiliate\/advertising":"\/dashboard\/affiliate\/advertising","\/dashboard\/affiliate\/advertising-guidelines":"\/dashboard\/affiliate\/advertising-guidelines","\/dashboard\/warehouse\/new":"\/dashboard\/warehouse\/new","\/dashboard\/warehouse\/new-shipment":"\/dashboard\/warehouse\/new-shipment","\/dashboard\/store":"\/dashboard\/store","\/dashboard":"\/dashboard\/default","\/competitor-comparison":"\/landing\/comparison","\/company-timeline":"\/company-timeline","\/warehousing-fulfillment":"\/warehousing-fulfillment","\/landing\/prestashop-print-products-fulfillment":"\/landing\/prestashop","\/warehousing-fulfillment\/same-day-order-fulfillment":"\/landing\/same-day-orders","\/holiday-order-deadlines":"\/holiday-order-deadlines","\/white-label-products":"\/white-label-products","\/design-your-own-hat":"\/design-your-own-hat","\/production-footage":"\/production-footage","\/services\/europe-drop-shipping":"\/print-on-demand-europe","\/bulk-discount":"\/landing\/bulk-discount","\/print-on-demand":"\/print-on-demand","\/landing\/affiliate-lessons":"\/affiliate-lessons","\/ecommerce-photography":"\/ecommerce-photography","\/covid-19":"\/landing-page-generator\/preview8a80703754716bc0021fad4473888653","\/jackpot":"\/landing-page-generator\/preview8f02ad8cc48461c4227b2339fe896336","\/product-personalization-tool":"\/product-personalization-tool","\/mockup-generator":"\/mockup-generator","\/design-maker":"\/design-maker","\/grow-a-fashion-brand":"\/grow-a-fashion-brand","\/academy\/lessons":"\/academy\/lessons","\/blog":"https:\/\/www.printful.com\/blog\/","\/blog\/marketing-tips":"https:\/\/www.printful.com\/blog\/marketing-tips","\/jobs":"\/jobs","\/news":"\/news","\/news\/featured-on":"\/news\/featured-on","\/news\/press-kit":"\/news\/press-kit","\/news\/press-kit\/products":"\/news\/press-kit\/products","\/news\/press-kit\/fulfillment-center":"\/news\/press-kit\/fulfillment-center","\/news\/press-kit\/office-and-staff":"\/news\/press-kit\/office-and-staff","\/news\/learn-more":"\/news\/learn-more","\/give-5-get-5":"\/give-5-get-5","\/dashboard\/referral":"\/dashboard\/referral","\/enterprise\/online-brands":"\/enterprise\/online-brands","\/enterprise\/merchandise-agencies":"\/enterprise\/merchandise-agencies","\/enterprise\/fashion-retailers":"\/enterprise\/fashion-retailers","\/enterprise\/gaming-merchandise":"\/enterprise\/gaming-merchandise","\/enterprise\/entertainment-media-companies":"\/enterprise\/entertainment-media-companies","\/enterprise\/inventory-free-operations":"\/enterprise\/inventory-free-operations","\/enterprise\/product-customization":"\/enterprise\/product-customization","\/enterprise\/geographic-market-expansion":"\/enterprise\/geographic-market-expansion"}; 
+        
+
+            (function() {
+                var PF = window.PF || {};
+                
+                // Main
+                PF.LOCALES = ["en","es","fr","de","it","jp","br","nl"];
+                PF.LOCALE = "en";
+                PF.DEV = false;
+                PF.MAINTENANCE_INTEGRATIONS = ["bonanza"];
+                PF.ASSETS_URL = "https:\/\/static.cdn.printful.com\/static\/v816\/";
+                window.PF_ENV_VARS = {"KEYWORD_SCOUT_GQL_URL":"https:\/\/keyword-scout.printful.com\/graphql","KEYWORD_SCOUT_GQL_WS_URL":"wss:\/\/keyword-scout.printful.com\/graphql","IMG_DYNAMIC_RESIZE":"1","ENABLE_SIMILAR_PRODUCTS_SIMULATOR":false};
+                
+                // Configs
+                PF.Config = PF.Config || {};
+                PF.Config.PUSHER_CONFIG = {"APP_KEY":"ad0dd572bad404ab9f65","APP_CLUSTER":"mt1","AUTH_ENDPOINT":"\/pusher\/auth","CSRF_TOKEN":"RNU4B4otMAZcR-gl5LSoJ0FafMteRxzMYEUYz1M6R2UJsQtXw1xbMyQzsVO3-poRMA4QoAYkRZkYF22OY3gCAQ==","CHANNEL_SUFFIX":""};
+                PF.Config.S3_UPLOAD_URL = "https:\/\/printful-upload.s3.amazonaws.com\/";
+                
+                // Raw globals
+                PF.RawGlobals = PF.RawGlobals || {};
+                PF.RawGlobals.Customer = {"customerId":0,"environmentId":0,"firstName":null,"lastName":null,"fullName":null,"email":null,"sampleOrdersLeft":0,"sampleOrdersTotal":0,"sampleItems":3,"discount":0,"createdAt":0,"copyright_seen":0,"embroidery_seen":0,"label_inside_seen":0,"environmentValue":0,"location":{"country":"NG","region":"africa","state":null},"leadScoringProfile":null,"environmentCreatedAt":0,"sellingRegionSetting":{"id":0,"storeId":0,"environmentId":-1,"sellingRegionId":1,"requirementId":0,"originSellingRegion":{"id":1,"name":"Worldwide","translatedName":"Worldwide","icon":"https:\/\/static.cdn.printful.com\/static\/v816\/images\/layout\/flags\/worldwide.svg","preferredRegions":null,"requirements":[],"countryCode":null,"isSingleCountry":false,"isNorthAmerica":false,"isEurope":false,"isCanada":false,"isWorldwide":true,"isBrazil":false},"requirement":null,"isSetupCompleted":false}};
+                PF.RawGlobals.EmbedStore = null;
+                PF.RawGlobals.CookiePreferenceData = {"arePreferencesSet":false,"hasAcceptedAll":false,"hasAcceptedNecessary":1,"hasAcceptedPerformance":1,"hasAcceptedFunctional":1,"hasAcceptedTargeting":0};
+                
+                if (!window.PF) {
+                    window.PF = PF;
+                }
+            })();
+        
+(function () {
+    // Preload feature flags
+    var currentlyPreloadedResults = window.PreloadedFeatureFlagResults || {};
+    var newlyPreloadedResults = {};
+    window.PreloadedFeatureFlagResults = Object.assign({}, currentlyPreloadedResults, newlyPreloadedResults);
+})();</script>
+    <div id="content" tabindex="-1" role="main">
+        
+
+<style>
+    #browserSupport {
+        z-index: 100;
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        width: 487px;
+    }
+
+    @media (max-width: 520px) {
+        #browserSupport {
+            width: 300px;
+        }
+    }
+
+    #browserSupport .pf-banner__logo {
+        margin-right: 0 !important;
+    }
+</style>
+    
+<div class="container above-the-fold">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="pf-pt-40 pf-pb-0 pf-pt-md-64 pf-pb-24 pf-pb-md-40">
+                <div class="row">
+                    <div class="col-md-11 col-xl-9 text-center text-md-left">
+                        <h1 class="pf-h1 pf-mt-0 pf-mb-8">
+                            Create and sell custom products online                        </h1>
+                        <p class="pf-ui-subheading-lg pf-text-muted pf-mb-0">
+                            Turn your ideas into premium products that leave a lasting impression                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 above-the-fold__img-wrapper pf-pb-16 pf-pb-md-0">
+            <video class="video-node center-block pf-w-100 home-animation pf-mt-0 pf-mt-md-24" loop="" autoplay="" muted="" playsinline="" disableremoteplayback="">
+                                    <source src="https://files.cdn.printful.com/upload/landing-video/7c/7c72530811f418630a67bdfe97be5f11?v=0bfbb3ca1ef101900d69284df6f8c445" type="video/mp4">
+                            </video>
+                                                </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="above-the-fold__btn-area col-12">
+                    <a href="javascript:" onclick="orderAction()" class="pf-btn pf-btn-secondary pf-btn-lg pf-mb-12 above-the-fold__btn pf-d-md-none" dusk="start-order-button">
+                        Order for yourself                    </a>
+
+                    <a href="https://www.printful.com/auth/register?ref=b2b" onclick="connectShopAction()" dusk="connect-shop-button" class="pf-btn pf-btn-primary pf-btn-lg pf-mb-12 pf-mr-md-12 above-the-fold__btn">
+                        Start selling                    </a>
+
+                    <a href="javascript:" onclick="orderAction()" class="pf-btn pf-btn-secondary pf-btn-lg pf-mb-12 above-the-fold__btn pf-d-none pf-d-md-inline-block" dusk="start-order-button">
+                        Order for yourself                    </a>
+
+                    <p class="pf-text-muted text-center-xs pf-ui-caption pf-mb-0">
+                        <span>No upfront fees</span> •
+                        <span>No order minimums</span> •
+                        <span>
+                            291 premium products                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- "Latest orders from:" block -->
+    <div data-pf-lazyload="248df73984995c2781ea48b1852abf33"></div></div>
+
+
+<div class="pf-pt-32">
+    <div data-pf-lazyload="c807532f0e8a7d664a6deed46147ee40"></div></div>
+
+<!-- A/B test for anonymous customers -->
+    <div id="recently-viewed-mockups-homepage" class="pf-d-none">
+        <div data-pf-lazyload="0fe728cb89e8075e604495a5f43fe7da"></div>    </div>
+<!-- ------------------------------------- -->
+
+<div data-pf-lazyload="8ec31bd686575b3d84e779aa4905d3b0"></div>
+<div id="banner">
+    </div>
+<div id="parallax-scroll-2">
+    <div data-pf-lazyload="3c27d216ef43d6521d5e5aa44ec87f34"></div>    <div class="pf-mt-8 pf-mt-sm-40 pf-mb-64">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div data-vue-root="uTW65ul3jZaJTpwe" data-vue-components="[&quot;v-horizontal-block-with-slide-vue&quot;]" data-vuex-stores="[]"><v-horizontal-block-with-slide-vue :items="[{&quot;icon&quot;:&quot;https:\/\/files.cdn.printful.com\/upload\/icons-item-svg-file\/23\/23b6e6d68e874b26ec6fcddb1a45de9f&quot;,&quot;title&quot;:&quot;Connect to Printful&quot;,&quot;description&quot;:&quot;Connect your store to Printful and add your products&quot;},{&quot;icon&quot;:&quot;https:\/\/files.cdn.printful.com\/upload\/icons-item-svg-file\/5d\/5d128e2bdf9ecb2f8ff107a33398f69c&quot;,&quot;title&quot;:&quot;Omar from Nigeria places an order&quot;,&quot;description&quot;:&quot;The customer explores your store and purchases a product&quot;},{&quot;icon&quot;:&quot;https:\/\/files.cdn.printful.com\/upload\/icons-item-svg-file\/d7\/d718be44217009998e13c7cc0f23b918&quot;,&quot;title&quot;:&quot;Printful fulfills the order&quot;,&quot;description&quot;:&quot;We take care of your order from A to Z, and control the whole fulfillment process&quot;},{&quot;icon&quot;:&quot;https:\/\/files.cdn.printful.com\/upload\/icons-item-svg-file\/2d\/2df7598c6ab774be6373746a16f7a1d6&quot;,&quot;title&quot;:&quot;Order ships to your customer&quot;,&quot;description&quot;:&quot;Omar receives their order, and you get all the credit&quot;}]"></v-horizontal-block-with-slide-vue></div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pf-py-64">
+    <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+            <div data-pf-lazyload="da24c072820a26cbdb9f390a7af6f4b0"></div>        </div>
+    </div>
+</div>
+
+    <div data-pf-lazyload="39c8e0ef75e2574a8f2d30cd4c432bfd"></div>
+    <div data-pf-lazyload="64dff8f90bdb8a59ffdda941502e5bfa"></div>
+<div data-pf-lazyload="64b8165ab66c46892941413991cd65ee"></div>
+<div data-pf-lazyload="79c03e35a119f0d960513c42051dd4a3"></div>
+<div data-pf-lazyload="8b0997ff1b7ca6b53aa8a0142374cdb4"></div>
+<div class="container pf-mt-64">
+    <div class="row">
+        <div class="col-xl-10 offset-xl-1">
+            <div class="pf-rounded--large home-page-large-volume-block" style="overflow: hidden;">
+                <div data-pf-lazyload="f8ce93ba38c46b02d39a80599127dccc"></div>            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+    {
+        "@context"      : "http://schema.org",
+        "@type"         : "Organization",
+        "name"          : "Printful",
+        "url"           : "https://www.printful.com",
+        "logo"          : "https://www.printful.com/static/images/layout/printful-logo.png",
+        "contactPoint"  : [
+            {
+                "@type"             : "ContactPoint",
+                "telephone"         : "+1-818-351-7181",
+                "contactType"       : "customer service",
+                "availableLanguage" : [
+                    "English"
+                ]
+            }
+        ],
+        "sameAs"        : [
+            "https://www.facebook.com/printful",
+            "https://twitter.com/printful",
+            "https://www.instagram.com/printful/",
+            "https://www.youtube.com/channel/UCnzsJ4Wvmug35USak9mGx3w",
+            "https://www.linkedin.com/company/printful/"
+        ]
+    }
+</script>
+
+
+    </div>
+
+    
+    
+<div data-vue-root="zwvMfMl4VDDnN0yT" data-vue-components="[&quot;back-to-top-button&quot;]" data-vuex-stores="[]"><back-to-top-button :footer="&quot;large&quot;"></back-to-top-button></div>
+
+<div class="page-footer pf-ui-body " role="contentinfo">
+    <div class="container pf-pt-64 pf-pb-40">
+        <div class="row row-flex page-footer__row">
+                            <div class="col-sm-4 pf-mb-sm-40 col-md-2 pf-mb-0 ">
+                    <div data-toggle="collapse" data-target="#submenu-0" class="page-footer__submenu visible-xs">
+                        <div class="pf-h4 pf-m-0 pf-d-flex pf-justify-content-between">
+                            Sell with Printful                            <span class="submenu-caret"></span>
+                        </div>
+                    </div>
+                    <div class="pf-h4 pf-m-0 hidden-xs">
+                        Sell with Printful                    </div>
+                    <ul class="nav nav-stacked navbar-collapse collapse pf-p-0 pf-mt-12" id="submenu-0">
+                                                                                    <li class="pf-mt-0 pf-mb-8 pf-mt-8">
+                                    <a href="https://www.printful.com/integrations" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-connect-your-store">Connect your store</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/print-on-demand" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-print-on-demand">Print on demand</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/warehousing-fulfillment" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-use-warehousing-amp-fulfillment">Use Warehousing &amp; Fulfillment</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/start-your-online-store-without-inventory" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-sell-online-without-inventory">Sell online without inventory</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/enterprises" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-grow-your-enterprise">Grow your enterprise</span>
+                                                                            </a>
+                                </li>
+                                                                            </ul>
+                </div>
+                                <div class="col-sm-4 pf-mb-sm-40 col-md-2 pf-mb-0 pf-mt-24 pf-mt-sm-0">
+                    <div data-toggle="collapse" data-target="#submenu-1" class="page-footer__submenu visible-xs">
+                        <div class="pf-h4 pf-m-0 pf-d-flex pf-justify-content-between">
+                            Create custom products                             <span class="submenu-caret"></span>
+                        </div>
+                    </div>
+                    <div class="pf-h4 pf-m-0 hidden-xs">
+                        Create custom products                     </div>
+                    <ul class="nav nav-stacked navbar-collapse collapse pf-p-0 pf-mt-12" id="submenu-1">
+                                                                                    <li class="pf-mt-0 pf-mb-8 pf-mt-8">
+                                    <a href="https://www.printful.com/custom-products" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-product-catalog">Product catalog</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/design-your-own-products" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-design-your-own">Design your own</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/quality" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-quality">Quality</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/design-maker" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-design-maker">Design Maker</span>
+                                                                            </a>
+                                </li>
+                                                                            </ul>
+                </div>
+                                <div class="col-sm-4 pf-mb-sm-40 col-md-2 pf-mb-0 pf-mt-24 pf-mt-sm-0">
+                    <div data-toggle="collapse" data-target="#submenu-2" class="page-footer__submenu visible-xs">
+                        <div class="pf-h4 pf-m-0 pf-d-flex pf-justify-content-between">
+                            Explore                             <span class="submenu-caret"></span>
+                        </div>
+                    </div>
+                    <div class="pf-h4 pf-m-0 hidden-xs">
+                        Explore                     </div>
+                    <ul class="nav nav-stacked navbar-collapse collapse pf-p-0 pf-mt-12" id="submenu-2">
+                                                                                    <li class="pf-mt-0 pf-mb-8 pf-mt-8">
+                                    <a href="https://www.printful.com/blog/" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-blog">Blog</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/printful-lessons" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-printful-lessons">Printful Lessons</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/news" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-newsroom">Newsroom</span>
+                                                                            </a>
+                                </li>
+                                                                            </ul>
+                </div>
+                                <div class="col-sm-4 pf-mb-sm-40 col-md-2 pf-mb-0 pf-mt-24 pf-mt-sm-0">
+                    <div data-toggle="collapse" data-target="#submenu-3" class="page-footer__submenu visible-xs">
+                        <div class="pf-h4 pf-m-0 pf-d-flex pf-justify-content-between">
+                            Resources                            <span class="submenu-caret"></span>
+                        </div>
+                    </div>
+                    <div class="pf-h4 pf-m-0 hidden-xs">
+                        Resources                    </div>
+                    <ul class="nav nav-stacked navbar-collapse collapse pf-p-0 pf-mt-12" id="submenu-3">
+                                                                                    <li class="pf-mt-0 pf-mb-8 pf-mt-8">
+                                    <a href="https://help.printful.com/hc/en-us" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-help-center">Help Center</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/guides/holiday-marketing" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-holiday-marketing-guide">Holiday marketing guide</span>
+                                                                                    <span class="pf-badge pf-badge-small pf-badge--primary">
+                                                New                                            </span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/shipping" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-shipping">Shipping</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/policies/returns" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-returns">Returns</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/policies" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-policies">Policies</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/gift-cards" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-gift-cards">Gift Cards</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/sitemap" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-sitemap">Sitemap</span>
+                                                                            </a>
+                                </li>
+                                                                            </ul>
+                </div>
+                                <div class="col-sm-4 pf-mb-sm-40 col-md-2 pf-mb-0 pf-mt-24 pf-mt-sm-0">
+                    <div data-toggle="collapse" data-target="#submenu-4" class="page-footer__submenu visible-xs">
+                        <div class="pf-h4 pf-m-0 pf-d-flex pf-justify-content-between">
+                            About Printful                            <span class="submenu-caret"></span>
+                        </div>
+                    </div>
+                    <div class="pf-h4 pf-m-0 hidden-xs">
+                        About Printful                    </div>
+                    <ul class="nav nav-stacked navbar-collapse collapse pf-p-0 pf-mt-12" id="submenu-4">
+                                                                                    <li class="pf-mt-0 pf-mb-8 pf-mt-8">
+                                    <a href="https://www.printful.com/about" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-our-story">Our story</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/contacts" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-contacts">Contacts</span>
+                                                                            </a>
+                                </li>
+                                                                                                                                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/sustainability-responsibility" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-sustainability-amp-responsibility">Sustainability &amp; Responsibility</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/affiliates" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-affiliate-program">Affiliate Program</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/referral" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-referral-program">Referral Program</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/jobs" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-jobs">Jobs</span>
+                                                                            </a>
+                                </li>
+                                                                            </ul>
+                </div>
+                                <div class="col-sm-4 pf-mb-sm-40 col-md-2 pf-mb-0 pf-mt-24 pf-mt-sm-0">
+                    <div data-toggle="collapse" data-target="#submenu-5" class="page-footer__submenu visible-xs">
+                        <div class="pf-h4 pf-m-0 pf-d-flex pf-justify-content-between">
+                            Latest updates                            <span class="submenu-caret"></span>
+                        </div>
+                    </div>
+                    <div class="pf-h4 pf-m-0 hidden-xs">
+                        Latest updates                    </div>
+                    <ul class="nav nav-stacked navbar-collapse collapse pf-p-0 pf-mt-12" id="submenu-5">
+                                                                                    <li class="pf-mt-0 pf-mb-8 pf-mt-8">
+                                    <a href="https://www.printful.com/recent-updates" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-recent-updates">Recent updates</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/blog/how-to-create-a-viral-t-shirt/" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-how-to-create-a-viral-t-shirt-design">How to create a viral t-shirt design</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/blog/printful-custom-packaging/" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-printful-custom-packaging">Printful custom packaging</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/style-trends-2021" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-printful-style-trends-2021">Printful style trends 2021</span>
+                                                                            </a>
+                                </li>
+                                                                                                                    <li class="pf-mt-0 pf-mb-8 ">
+                                    <a href="https://www.printful.com/grow-a-fashion-brand" class="pf-p-0 pf-m-0" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Navigation link clicks&#39;, &#39;Large Footer&#39;, this.href);">
+                                        <span id="footer-grow-a-fashion-brand">Grow a fashion brand</span>
+                                                                            </a>
+                                </li>
+                                                                            </ul>
+                </div>
+                        </div>
+
+        <div class="pf-mt-48 pf-mt-sm-8 pf-d-sm-flex pf-justify-content-between pf-align-items-center">
+            <div class="col-12 col-sm-4 pf-px-0">
+                
+<img src="./Index_files/logo.svg" height="16px" alt="Printful" title="Printful">
+<div class="pf-h5 pf-text-dark pf-mt-16 pf-mb-0">Fulfilling your ideas on demand</div>
+<p class="pf-ui-body pf-text-muted pf-mt-2 pf-mb-16">
+    Trusted to deliver 36.6M items <br> since 2013</p>            </div>
+            <div class="col-12 col-sm-8 pf-d-sm-flex pf-align-items-center pf-flex-row-reverse pf-px-0">
+                <div class="social-links" id="footer-social-icons">
+    <a href="https://www.instagram.com/printful/" target="_blank" rel="me noopener" title="Instagram">
+        <svg class="social-links__icon social-links__instagram" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g class="social-links__icon-fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd"></use>
+                    <rect stroke="#DDDDDD" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="3"></rect>
+                </g>
+                <g class="social-links__icon-inner" transform="translate(7.000000, 7.000000)" fill="#767676">
+                    <path d="M9,6.75 C7.75725,6.75 6.75,7.75725 6.75,9 C6.75,10.24275 7.75725,11.25 9,11.25 C10.24275,11.25 11.25,10.24275 11.25,9 C11.25,7.75725 10.24275,6.75 9,6.75 M9,5.25 C11.0715,5.25 12.75,6.92925 12.75,9 C12.75,11.0715 11.0715,12.75 9,12.75 C6.92925,12.75 5.25,11.0715 5.25,9 C5.25,6.92925 6.92925,5.25 9,5.25 M12.9375,4.125 C13.455,4.125 13.875,4.545 13.875,5.0625 C13.875,5.58 13.455,6 12.9375,6 C12.42,6 12,5.58 12,5.0625 C12,4.545 12.42,4.125 12.9375,4.125 M5.7,3 C4.209,3 3,4.209 3,5.7 L3,12.3 C3,13.7925 4.2075,15 5.7,15 L12.3,15 C13.79175,15 15,13.79175 15,12.3 L15,5.7 C15,4.2075 13.7925,3 12.3,3 L5.7,3 M5.85,1.5 L12.15,1.5 C14.55,1.5 16.5,3.45 16.5,5.85 L16.5,12.15 C16.5,14.55225 14.55225,16.5 12.15,16.5 L5.85,16.5 C3.45,16.5 1.5,14.55 1.5,12.15 L1.5,5.85 C1.5,3.44775 3.44775,1.5 5.85,1.5"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a href="https://www.facebook.com/printful" target="_blank" rel="me noopener" title="Facebook">
+        <svg class="social-links__icon social-links__facebook" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g class="social-links__icon-fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd"></use>
+                    <rect stroke="#DDDDDD" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="3"></rect>
+                </g>
+                <g class="social-links__icon-inner" transform="translate(7.000000, 7.000000)" fill="#767676">
+                    <path d="M12.75,1.5 L12.75,4.5 L11.25,4.5 C10.7325,4.5 10.5,5.1075 10.5,5.625 L10.5,7.5 L12.75,7.5 L12.75,10.5 L10.5,10.5 L10.5,16.5 L7.5,16.5 L7.5,10.5 L5.25,10.5 L5.25,7.5 L7.5,7.5 L7.5,4.5 C7.5,2.84325 8.84325,1.5 10.5,1.5 L12.75,1.5 Z"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a href="https://www.youtube.com/channel/UCnzsJ4Wvmug35USak9mGx3w" target="_blank" rel="me noopener" title="Youtube">
+        <svg class="social-links__icon social-links__youtube" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g class="social-links__icon-fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd"></use>
+                    <rect stroke="#DDDDDD" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="3"></rect>
+                </g>
+                <g class="social-links__icon-inner" transform="translate(7.000000, 7.000000)" fill="#767676">
+                    <path d="M15,3.299925 C14.55,3.149925 11.775,2.999925 9,2.999925 C6.225,2.999925 3.45,3.142425 3,3.284925 C1.83,3.674925 1.5,6.299925 1.5,8.999925 C1.5,11.692425 1.83,14.324925 3,14.707425 C3.45,14.857425 6.225,14.999925 9,14.999925 C11.775,14.999925 14.55,14.857425 15,14.707425 C16.17,14.324925 16.5,11.692425 16.5,8.999925 C16.5,6.299925 16.17,3.682425 15,3.299925 M7.5,12.374925 L7.5,5.624925 L12,8.999925"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a href="https://www.linkedin.com/company/printful/" target="_blank" rel="me noopener" title="LinkedIn">
+        <svg class="social-links__icon social-links__linkedin" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g class="social-links__icon-fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd"></use>
+                    <rect stroke="#DDDDDD" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="3"></rect>
+                </g>
+                <g class="social-links__icon-inner" fill="#777" fill-rule="evenodd">
+                    <path d="M8.799 23.5v-10h3.096v10H8.8zm1.533-15c1.01 0 1.831.826 1.831 1.845 0 1.02-.82 1.846-1.831 1.846A1.839 1.839 0 0 1 8.5 10.345c0-1.019.82-1.845 1.832-1.845zm9.528 4.695c2.122 0 3.64 1.295 3.64 3.972V23.5h-3.082v-5.25c0-1.439-.546-2.243-1.685-2.243-1.24 0-1.888.838-1.888 2.244V23.5h-2.97v-10h2.97v1.347s.894-1.652 3.015-1.652z"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a href="https://twitter.com/printful" target="_blank" rel="me noopener" title="Twitter">
+        <svg class="social-links__icon social-links__twitter" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g class="social-links__icon-fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd"></use>
+                    <rect stroke="#DDDDDD" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="3"></rect>
+                </g>
+                <g class="social-links__icon-inner" transform="translate(7.000000, 7.000000)" fill="#767676">
+                    <path d="M16.845,4.5 C16.2675,4.7625 15.645,4.935 15,5.0175 C15.66,4.62 16.17,3.99 16.41,3.2325 C15.7875,3.6075 15.0975,3.87 14.37,4.02 C13.7775,3.375 12.945,3 12,3 C10.2375,3 8.7975,4.44 8.7975,6.2175 C8.7975,6.4725 8.8275,6.72 8.88,6.9525 C6.21,6.8175 3.8325,5.535 2.25,3.5925 C1.9725,4.065 1.815,4.62 1.815,5.205 C1.815,6.3225 2.3775,7.3125 3.2475,7.875 C2.715,7.875 2.22,7.725 1.785,7.5 L1.785,7.5225 C1.785,9.0825 2.895,10.3875 4.365,10.68 C4.095,10.755 3.81,10.7925 3.5175,10.7925 C3.315,10.7925 3.1125,10.77 2.9175,10.7325 C3.3225,12 4.5,12.945 5.9175,12.9675 C4.8225,13.8375 3.435,14.3475 1.92,14.3475 C1.665,14.3475 1.41,14.3325 1.155,14.3025 C2.58,15.2175 4.275,15.75 6.09,15.75 C12,15.75 15.2475,10.845 15.2475,6.5925 C15.2475,6.45 15.2475,6.315 15.24,6.1725 C15.87,5.7225 16.41,5.1525 16.845,4.5"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <a href="https://www.pinterest.com/printful/" target="_blank" rel="me noopener" title="Pinterest">
+        <svg class="social-links__icon social-links__pinterest" width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g class="social-links__icon-fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd"></use>
+                    <rect stroke="#DDDDDD" stroke-width="1" x="0.5" y="0.5" width="31" height="31" rx="3"></rect>
+                </g>
+                <g class="social-links__icon-inner" transform="translate(4.000000, 4.000000)" fill="#767676">
+                    <path d="M9.04,21.54C10,21.83 10.97,22 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2A10,10 0 0,0 2,12C2,16.25 4.67,19.9 8.44,21.34C8.35,20.56 8.26,19.27 8.44,18.38L9.59,13.44C9.59,13.44 9.3,12.86 9.3,11.94C9.3,10.56 10.16,9.53 11.14,9.53C12,9.53 12.4,10.16 12.4,10.97C12.4,11.83 11.83,13.06 11.54,14.24C11.37,15.22 12.06,16.08 13.06,16.08C14.84,16.08 16.22,14.18 16.22,11.5C16.22,9.1 14.5,7.46 12.03,7.46C9.21,7.46 7.55,9.56 7.55,11.77C7.55,12.63 7.83,13.5 8.29,14.07C8.38,14.13 8.38,14.21 8.35,14.36L8.06,15.45C8.06,15.62 7.95,15.68 7.78,15.56C6.5,15 5.76,13.18 5.76,11.71C5.76,8.55 8,5.68 12.32,5.68C15.76,5.68 18.44,8.15 18.44,11.43C18.44,14.87 16.31,17.63 13.26,17.63C12.29,17.63 11.34,17.11 11,16.5L10.33,18.87C10.1,19.73 9.47,20.88 9.04,21.57V21.54Z"></path>
+                </g>
+            </g>
+        </svg>
+    </a>
+</div>
+                <ul class="pf-d-flex pf-mb-0 pf-mr-16 pf-p-0 pf-mt-16 pf-mt-sm-0" id="footer-settings">
+                    
+    <li class="pf-d-inline-block">
+        <ul class="nav language-menu pf-mx-8 pf-d-sm-flex ">
+            <li class="dropdown">
+                <a href="javascript:" class="pf-p-0 dropdown-toggle pf-d-flex pf-flex-column pf-flex-md-row pf-align-items-center user-settings" data-toggle="dropdown" id="language-menu-toggle">
+                    <i class="header__link__icon pf-i pf-i-earth pf-i-24 "></i>
+                                            <span class="pf-d-none pf-d-md-inline-block header__link__text data-hj-suppress pf-ml-4">EN</span>
+                                    </a>
+                <ul class="dropdown-menu dropdown-menu-right pf-ui-body pf-mt-12" id="language-menu">
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;en_US&#39;)" class="active">
+                                English (EN)
+                            </a>
+                        </li>
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;es_ES&#39;)" class="">
+                                Español (ES)
+                            </a>
+                        </li>
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;fr_FR&#39;)" class="">
+                                Français (FR)
+                            </a>
+                        </li>
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;de_DE&#39;)" class="">
+                                Deutsch (DE)
+                            </a>
+                        </li>
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;it_IT&#39;)" class="">
+                                Italiano (IT)
+                            </a>
+                        </li>
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;ja_JP&#39;)" class="">
+                                日本語 (JP)
+                            </a>
+                        </li>
+                                            <li>
+                            <a onclick="PF.UserSettingsMenu.changeLanguage(&#39;pt_BR&#39;)" class="">
+                                Português (BR)
+                            </a>
+                        </li>
+                                    </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="pf-d-flex">
+                    <a href="javascript:" class=" pf-mx-8 user-settings js-user-settings-toggle pf-flex-column pf-flex-md-row pf-align-items-center">
+                <i class="header__link__icon pf-i pf-i-24 pf-i-currency-usd"></i>
+                <span class="pf-d-none pf-d-md-inline-block header__link__text pf-ml-sm-4">USD</span>
+            </a>
+            </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+            
+<div class="pf-bg-lighter pf-pt-24">
+    <div class="container">
+        <div data-vue-root="mE2wCp7RRogFkGYu" data-vue-components="[&quot;newsletter-subscribe-form&quot;]" data-vuex-stores="[]"><newsletter-subscribe-form></newsletter-subscribe-form></div>        <hr class="pf-m-0">
+    </div>
+</div>
+    
+    <div class="pf-bg-lighter pf-pt-24">
+    <div class="container">
+        <div class="pf-d-flex pf-flex-column pf-flex-xs-row pf-flex-wrap pf-justify-content-between">
+            <div>
+                <p class="pf-ui-legal pf-mb-4 pf-text-muted">Payment methods we accept:</p>
+                <div class="pf-d-flex pf-flex-row pf-flex-wrap" id="footer-payment-methods">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/visa-light-noborder.svg" alt="visa">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/mastercard-light-noborder.svg" alt="mastercard">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/american-express-light-noborder.svg" alt="american express">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/paypal-light-noborder.svg" alt="paypal">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/maestro-light-noborder.svg" alt="maestro">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/discover-light-noborder.svg" alt="discover">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/diners-club-light-noborder.svg" alt="diners club">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/jcb-light-noborder.svg" alt="jcb">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/union-pay-light-noborder.svg" alt="union pay">
+                                    </div>
+            </div>
+            <div class="pf-mt-12 pf-mt-xs-0">
+                <p class="pf-ui-legal pf-mb-4 pf-text-muted">We deliver with:</p>
+                <div class="pf-d-flex pf-flex-row pf-flex-wrap" id="footer-shipping-carriers">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/usps.svg" alt="usps">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/dhl.svg" alt="dhl">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/fedex.png" alt="fedex">
+                                            <img class="pf-mr-4 pf-mb-4" height="24px" src="./Index_files/asendia.png" alt="asendia">
+                                    </div>
+            </div>
+        </div>
+        <hr class="pf-mt-12 pf-m-0">
+    </div>
+</div>
+
+    
+<div class="pf-bg-lighter">
+    <div class="container pf-py-24">
+        <div class="pf-d-flex pf-justify-content-between pf-align-items-center">
+            <p class="pf-ui-legal pf-m-0 pf-text-muted" id="footer-address">© 2013 - 2021 All Rights reserved. Printful® Inc. 11025 Westlake Dr, Charlotte, North Carolina 28273</p>
+                    </div>
+    </div>
+</div>
+</div>
+
+    
+    <script src="./Index_files/jquery-2.1.4.min.js.download"></script>
+<script src="./Index_files/yii.min.js.download"></script>
+<script src="./Index_files/bootstrap.min.js.download"></script>
+<script src="./Index_files/moment.js.download"></script><meta name="ahrefs-site-verification" content="03a86649b332eab40013df7fba214ce178d6e43ec59256db1fc67f021fc9e38b"><script type="text/javascript" id="gtm-youtube-tracking">(function(f,e,l){function m(g){var c;for(c=0;c<g.length;c++){var a=g[c].src||"";a=-1<a.indexOf("youtube.com/embed/")||-1<a.indexOf("youtube.com/v/")?!0:!1;if(a){a=g[c];var b=f.createElement("a");b.href=a.src;b.hostname="www.youtube.com";b.protocol=f.location.protocol;var d="/"===b.pathname.charAt(0)?b.pathname:"/"+b.pathname,h=e.location.protocol+"%2F%2F"+e.location.hostname+(e.location.port?":"+e.location.port:"");-1===b.search.indexOf("enablejsapi")&&(b.search=(0<b.search.length?b.search+"\x26":
+"")+"enablejsapi\x3d1");-1===b.search.indexOf("origin")&&-1===e.location.hostname.indexOf("localhost")&&(b.search=b.search+"\x26origin\x3d"+h);"application/x-shockwave-flash"===a.type&&(h=f.createElement("iframe"),h.height=a.height,h.width=a.width,d=d.replace("/v/","/embed/"),a.parentNode.parentNode.replaceChild(h,a.parentNode),a=h);b.pathname=d;a.src!==b.href+b.hash&&(a.src=b.href+b.hash);r(a)}}}function r(g){g.pauseFlag=!1;new YT.Player(g,{events:{onStateChange:function(c){t(c,g)}}})}function u(g){var c=
+{};d.events["Watch to End"]&&(c["Watch to End"]=99*g/100);if(d.percentageTracking){var a=[],b;d.percentageTracking.each&&(a=a.concat(d.percentageTracking.each));if(d.percentageTracking.every){var e=parseInt(d.percentageTracking.every,10),h=100/e;for(b=1;b<h;b++)a.push(b*e)}for(b=0;b<a.length;b++)h=a[b],e=h+"%",h=g*h/100,c[e]=Math.floor(h)}return c}function t(e,c){var a=e.data,b=e.target,d=b.getVideoUrl();d=d.match(/[?&]v=([^&#]*)/)[1];var g=b.getPlayerState(),f=b.getDuration(),k=u(f);f={1:"Play",
+2:"Pause"};f=f[a];c.playTracker=c.playTracker||{};1!==g||c.timer?(clearInterval(c.timer),c.timer=!1):(clearInterval(c.timer),c.timer=setInterval(function(){var a=b,e=k,d=c.videoId;a.getDuration();var g=a.getCurrentTime();a.getPlaybackRate();a[d]=a[d]||{};for(var f in e)e[f]<=g&&!a[d][f]&&(a[d][f]=!0,n(d,f))},1E3));1===a&&(c.playTracker[d]=!0,c.videoId=d,c.pauseFlag=!1);if(!c.playTracker[c.videoId])return!1;if(2===a){if(c.pauseFlag)return!1;c.pauseFlag=!0}p[f]&&n(c.videoId,f)}function n(f,c){var a=
+"https://www.youtube.com/watch?v\x3d"+f,b=e.GoogleAnalyticsObject;if("undefined"===typeof e[q]||d.forceSyntax)if("function"===typeof e[b]&&"function"===typeof e[b].getAll&&2!==d.forceSyntax)e[b]("send","event","Videos",c,a);else"undefined"!==typeof e._gaq&&1!==v&&e._gaq.push(["_trackEvent","Videos",c,a]);else e[q].push({event:"youTubeTrack",attributes:{videoUrl:a,videoAction:c}})}e.onYouTubeIframeAPIReady=function(){var d=e.onYouTubeIframeAPIReady;return function(){d&&d.apply(this,arguments);if(!navigator.userAgent.match(/MSIE [67]\./gi)){var c=
+f.getElementsByTagName("iframe"),a=f.getElementsByTagName("embed");m(c);m(a)}}}();var d=l||{},v=d.forceSyntax||0,q=d.dataLayerName||"dataLayer",p={Play:!0,Pause:!0,"Watch to End":!0};for(k in d.events)d.events.hasOwnProperty(k)&&(p[k]=d.events[k]);l=f.createElement("script");l.src="//www.youtube.com/iframe_api";var k=f.getElementsByTagName("script")[0];k.parentNode.insertBefore(l,k)})(document,window,{events:{Play:!0,Pause:!0,"Watch to End":!0},percentageTracking:{every:25,each:[10,90]}});</script><script type="text/javascript" id="" src="./Index_files/optimize.js.download"></script>
+<script src="./Index_files/jquery.migrate.js.download"></script>
+<script src="./Index_files/chosen.jquery.js.download"></script>
+<script src="./Index_files/jquery.fitvids.js.download"></script>
+<script src="./Index_files/taboverride.min.js.download"></script>
+<script src="./Index_files/pusher.js.download"></script>
+<script src="./Index_files/jquery.matchHeight.js.download"></script>
+<script src="./Index_files/slick.min.js.download"></script>
+<script src="./Index_files/typeahead.js.download"></script>
+<script src="./Index_files/webpack-runtime-pf.d7a65a61e9c9a3b2f99a.js.download"></script>
+<script src="./Index_files/commonPolyfills.29c5e532ecd207faf25f.js.download"></script>
+
+<script src="./Index_files/genericApolloSit_9d3ee6c7.f927049777128041d02a.js.download"></script></body></html>
